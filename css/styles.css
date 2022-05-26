@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pantallaPrincipal{
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    background-image: url(/img/pantallaInicio.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pantallaSeleccionpj{
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    background-image: url(/img/pantallaSeleccion.png);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#icono{
+    height: 17em;
+    width: 20em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 24em;
+    left: 34em;
+}
+#logo{
+    height: 20em;
+    position: absolute;
+    top: 0em;
+
+}
+h1{
+    color: yellow;
+}
