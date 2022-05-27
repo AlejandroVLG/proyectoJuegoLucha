@@ -95,3 +95,36 @@ h1{
 #ryu{
     margin-right: 5em;
 }
+        /* PANTALLA DE LUCHA */
+
+#pantallaLucha{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100%;
+    background-image: url(/img/imagenFondoCombate.png);
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#luchaIz{
+    height: 100vh;
+    width: 33%;
+}
+#luchaCentro{
+    height: 100vh;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#luchaDrch{
+    height: 100vh;
+    width: 33%;
+}
+#versus{
+    height: 15em;
+}

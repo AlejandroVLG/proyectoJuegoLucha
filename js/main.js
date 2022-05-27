@@ -6,14 +6,14 @@ const cambiarPantalla = (screenDestino) => {
         let destino = document.getElementById(screenDestino);
         destino.style.display = "flex";
 
-        let arrayDestino = ["pantallaPrincipal","pantallaSeleccionPj"];
+        let arrayDestino = ["pantallaPrincipal","pantallaSeleccionPj", "pantallaLucha"];
 
         for (let screen of arrayDestino){
             if (screen != screenDestino){
                 document.getElementById(screen).style.display = "none";
             };
         };
-    }, 2000);
+    }, 1500);
 }
 
 const seleccionarLuchador = (luchador) => {
@@ -22,7 +22,12 @@ const seleccionarLuchador = (luchador) => {
 
         luchadores.push(conjuntoLuchadores[luchador]);
         console.log(luchadores);
-        let opaco = document.getElementById(luchador);
-        opaco.style.opacity = 0.4;
-    }
+        setTimeout(()=>{
+            let opaco = document.getElementById(luchador);
+            opaco.style.opacity = 0.4;
+        }, 200);
+        if(luchadores.length == 2){
+            pantalla
+        }
+    };
 }
