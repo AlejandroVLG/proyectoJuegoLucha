@@ -1,3 +1,4 @@
+ 
 body{
     height: 100vh;
     width: 100vw;
@@ -7,64 +8,95 @@ body{
     align-items: center;
     justify-content: center;
 }
+    /*  PANTALLA DE INICIO */
 
 #pantallaPrincipal{
     height: 100vh;
     width: 100vw;
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: url(/img/pantallaInicio.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#pantallaSeleccionpj{
+#contenedorIcono{
     height: 100vh;
     width: 100vw;
-    background-size: 100%;
-    background-image: url(/img/pantallaSeleccion.jpg);
-    display: none;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-#icono{
-    height: 17em;
-    width: 20em;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 24em;
-    left: 34em;
+#iconoParteSuperior{
+    height: 40%;
+    width: 100%;
 }
-#logo{
-    height: 20em;
-    width: 20em;
-    position: absolute;
-    top: 0em;
-
+#iconoParteInferior{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
 }
 h1{
     color: yellow;
+    margin-right: 1em;
+    margin-bottom: -2.8em;
+    text-align: center;
 }
+#logo{
+    margin-right: 2em;
+}
+
+    /* PANTALLA SELECCION DE PERSONAJE */
+
+#pantallaSeleccionPj{
+    height: 100vh;
+    width: 100vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 100%;
+    background-image: url(/img/pantallaSeleccion.png);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#pantallaSeleccionSuperior{
+    height: 60%;   
+}
+#pantallaSeleccionInferior{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+                    
+        /* PERSONAJES SELECCIONABLES */
+
 .gif{
     height: 13em;
 }
 #bison{
-    position: absolute;
-    top: 30em;
-    left: 7em;
+    margin-right: 5em;
+
 }
 #ken{
-    position: absolute;
-    top: 30em;
-    left: 24em;
+    margin-right: 3em;
+
+}
+#fight{
+    margin-right: 2em;
+    height: 15em;
 }
 #ryu{
-    position: absolute;
-    top: 30em;
-    left: 58em;
+    margin-right: 6em;
 }
 #chunlee{
-    position: absolute;
-    top: 30em;
-    left: 72em;
+
 }

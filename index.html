@@ -10,19 +10,27 @@
 <body>
 
     <div id="pantallaPrincipal">
-        <div id="icono">
-            <h1>Press buttom</h1>
-            <img id="logo" src="img/logo.png" alt="logo" onclick="cambiarPantalla('pantallaSeleccionpj')">
+        <div id="contenedorIcono">
+            <div id="iconoParteSuperior"></div>
+            <div id="iconoParteInferior">
+                <h1>Press buttom <br> to start  </h1>
+                <img id="logo" src="img/logo.png" alt="logo" onclick="cambiarPantalla('pantallaSeleccionPj')">
+            </div>
+            
         </div>
     </div>
-    <div id="pantallaSeleccionpj">
-        <img id="fight" src="img/fight3.png" alt="fight" onclick="cambiarPantalla('pantallaPrincipal')">
-        <img id="bison" class="gif" src="img/gifBison.gif" alt="bison" onclick="">
-        <img id="chunlee" class="gif" src="img/gifChunlee.gif" alt="chunlee" onclick="">
-        <img id="ken" class="gif" src="img/gifKen.gif" alt="ken">
-        <img id="ryu" class="gif" src="img/gifRyu.gif" alt="ryu" onclick="">
+    <div id="pantallaSeleccionPj">
+        <div id="pantallaSeleccionSuperior"></div>
+        <div id="pantallaSeleccionInferior">
+            <img id="bison" class="gif" src="img/gifBison.gif" alt="bison" onclick="seleccionarLuchador('bison')">
+            <img id="ken" class="gif" src="img/gifKen.gif" alt="ken" onclick="seleccionarLuchador('ken')">
+            <img id="fight" src="img/fight.png" alt="fight" onclick="cambiarPantalla('pantallaPrincipal')">
+            <img id="ryu" class="gif" src="img/gifRyu.gif" alt="ryu" onclick="seleccionarLuchador('ryu')">
+            <img id="chunlee" class="gif" src="img/gifChunlee.gif" alt="chunlee" onclick="seleccionarLuchador('chunlee')">
+        </div>
     </div>
     
     <script src="js/main.js"></script>
+    <script src="js/luchador.js"></script>
 </body>
 </html>
