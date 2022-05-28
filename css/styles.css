@@ -66,7 +66,6 @@ h1{
     transition: 0.5s;
     transform: scale(0.96);
     box-shadow: 0em, whitesmoke;   
-
 }
 
     /* PANTALLA SELECCION DE PERSONAJE */
@@ -155,19 +154,50 @@ h1{
     height: 100vh;
     width: 100vw;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 100%;
     background-image: url(/img/imagenFondoCombate.png);
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* ZONA SUPERIOR PANTALLA DE LUCHA  */
+
+#mitadSuperior{
+    height: 65%;
+    width: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-    /* ZONA IZQUIERDA PANTALLA DE LUCHA  */
+    /* ZONA SUPERIOR IZQUIERDA */
 
-#luchaIz{
+#imagenLuchadorIz{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    /* ZONA SUPERIOR CENTRAL*/
+
+#huecoIconoCentroSuperior{
+    height: 100vh;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#versus{
+    margin-top: 10em;
+    height: 15em;
+}
+
+    /* ZONA SUPERIOR DERECHA */
+    
+#indicadoresDrch{
     height: 100vh;
     width: 33%;
     display: flex;
@@ -175,12 +205,34 @@ h1{
     justify-content: center;
     align-items: center;
 }
-#luchadorIzPelea{
+#imagenLuchadorDrch{
     height: 65%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+    /* ZONA INFERIOR PANTALLA DE LUCHA */
+
+#mitadInferior{
+    height: 35%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* ZONA INFERIOR IZQUIERDA PANTALLA DE LUCHA  */
+
+#indicadoresIz{
+    height: 100vh;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #vidaLuchadorIz{
     height: 15%;
@@ -213,36 +265,18 @@ h1{
     align-items: center;
 }
 
-        /* ZONA CENTRO PANTALLA DE LUCHA  */
+    /* ZONA INFERIOR CENTRAL PANTALLA DE LUCHA  */
 
-#luchaCentro{
+#huecoIconoCentroInferior{
     height: 100vh;
     width: 34%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#versus{
-    height: 15em;
-}
 
-        /* ZONA DERECHA PANTALLA DE LUCHA */
+    /* ZONA INFERIOR DERECHA PANTALLA DE LUCHA  */
 
-#luchaDrch{
-    height: 100vh;
-    width: 33%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#luchadorDrchPelea{
-    height: 65%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 #vidaLuchadorDrch{
     height: 15%;
     width: 100%;

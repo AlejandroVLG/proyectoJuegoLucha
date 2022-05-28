@@ -1,6 +1,6 @@
 let luchadores = [];
 
-let pantallaDeLucha = document.getElementById("pantallaLucha");
+let pantallaDeLucha = document.getElementById("mitadSuperior");
 
 const cambiarPantalla = (screenDestino) => {
 
@@ -34,7 +34,7 @@ const seleccionarLuchador = (luchador) => {
                 animacionfight.style.hover = 1;
 
                 setTimeout(()=>{               
-                    pantallaDeLucha.innerHTML = 
+                    pantallaDeLucha.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0]}.gif' alt='luchador1'></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`
     
     
                     setTimeout(()=>{

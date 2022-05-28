@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-        <!-- PANTALLA PINCIPAL -->
+    <!-- PANTALLA PINCIPAL -->
     <div id="pantallaPrincipal">
         <div id="contenedorIcono">
             <div id="iconoParteSuperior"></div>
@@ -18,42 +20,48 @@
                 <h1>Press to start</h1>
             </div>
         </div>
-    </div>  <!-- PANTALLA DE SELECCION -->
+    </div> <!-- PANTALLA DE SELECCION -->
     <div id="pantallaSeleccionPj">
         <div id="pantallaSeleccionSuperior"></div>
         <div id="pantallaSeleccionInferior">
             <img id="bison" class="gif" src="img/gifBison.gif" alt="bison" onclick="seleccionarLuchador('bison')">
             <img id="ken" class="gif" src="img/gifKen.gif" alt="ken" onclick="seleccionarLuchador('ken')">
-            <img id="fight" src="img/fight.png" alt="fight" >
+            <img id="fight" src="img/fight.png" alt="fight">
             <img id="ryu" class="gif" src="img/gifRyu.gif" alt="ryu" onclick="seleccionarLuchador('ryu')">
-            <img id="chunlee" class="gif" src="img/gifChunlee.gif" alt="chunlee" onclick="seleccionarLuchador('chunlee')">
+            <img id="chunlee" class="gif" src="img/gifChunlee.gif" alt="chunlee"
+                onclick="seleccionarLuchador('chunlee')">
         </div>
     </div> <!-- PANTALLA DE LUCHA -->
     <div id="pantallaLucha">
-        <div id="luchaIz">
-            <div id="luchadorIzPelea">
-
+        <div id="mitadSuperior">
+            <div class="luchadorFinal" id="imagenLuchadorIz"></div>
+            <div id="huecoIconoCentroSuperior">
+                <img id="versus" src="img/Vs.png" alt="versus" onclick="cambiarPantalla('pantallaPrincipal')">
             </div>
-            <div id="vidaLuchadorIz">
-                <div id="marcadorVidaLuchadorIz"></div>
-                <div id="nombreVidaLuchadorIz">Nombre</div>
+            <div class="luchadorFinal" id="imagenLuchadorDrch"></div>
+        </div>
+        <div id="mitadInferior">
+            <div id="indicadoresIz">
+                <div id="vidaLuchadorIz">
+                    <div id="marcadorVidaLuchadorIz"></div>
+                    <div id="nombreVidaLuchadorIz">Nombre</div>
+                </div>
+                <div id="iconoPegarLuchadorIz"></div>
             </div>
-            <div id="iconoPegarLuchadorIz"></div>
-        </div>
-        <div id="luchaCentro">
-            <img id="versus" src="img/Vs.png" alt="versus" onclick="cambiarPantalla('pantallaPrincipal')">
-        </div>
-        <div id="luchaDrch">
-            <div id="luchadorDrchPelea"></div>
-            <div id="vidaLuchadorDrch">
-                <div id="marcadorVidaLuchadorDrch"></div>
-                <div id="nombreVidaLuchadorDrch">Nombre</div>
+            <div id="huecoIconoCentroInferior">
             </div>
-            <div id="iconoPegarLuchadorDrch"></div>
-        </div>
+            <div id="indicadoresDrch">
+                <div id="vidaLuchadorDrch">
+                    <div id="marcadorVidaLuchadorDrch"></div>
+                    <div id="nombreVidaLuchadorDrch">Nombre</div>
+                </div>
+                <div id="iconoPegarLuchadorDrch"></div>
+            </div>
+        </div>    
     </div>
-    
+
     <script src="js/main.js"></script>
     <script src="js/luchador.js"></script>
 </body>
+
 </html>
