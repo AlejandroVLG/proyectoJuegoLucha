@@ -1,5 +1,7 @@
 let luchadores = [];
 
+let pantallaDeLucha = document.getElementById("pantallaLucha");
+
 const cambiarPantalla = (screenDestino) => {
 
     setTimeout(()=>{
@@ -13,7 +15,7 @@ const cambiarPantalla = (screenDestino) => {
                 document.getElementById(screen).style.display = "none";
             };
         };
-    }, 500);
+    }, 900);
 }
 
 const seleccionarLuchador = (luchador) => {
@@ -26,8 +28,21 @@ const seleccionarLuchador = (luchador) => {
             let opaco = document.getElementById(luchador);
             opaco.style.opacity = 0.4;
         }, 100);
-        if(luchadores.length == 2){
-            pantalla
-        }
+        if(luchadores.length === 2){
+            setTimeout(()=>{
+                let animacionfight = document.getElementById("fight");
+                animacionfight.style.hover = 1;
+
+                setTimeout(()=>{               
+                    pantallaDeLucha.innerHTML = 
+    
+    
+                    setTimeout(()=>{
+                        cambiarPantalla("pantallaLucha");
+                    }, 1000);      
+                }, 500);
+            },500)
+            
+        };
     };
 }

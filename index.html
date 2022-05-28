@@ -13,8 +13,9 @@
         <div id="contenedorIcono">
             <div id="iconoParteSuperior"></div>
             <div id="iconoParteInferior">
-                <h1>Press buttom <br> to start  </h1>
-                <img id="logo" src="img/logo.png" alt="logo" onclick="cambiarPantalla('pantallaSeleccionPj')">
+                <div id="iconoSf" onclick="cambiarPantalla('pantallaSeleccionPj')">
+                </div>
+                <h1>Press to start</h1>
             </div>
         </div>
     </div>  <!-- PANTALLA DE SELECCION -->
@@ -23,7 +24,7 @@
         <div id="pantallaSeleccionInferior">
             <img id="bison" class="gif" src="img/gifBison.gif" alt="bison" onclick="seleccionarLuchador('bison')">
             <img id="ken" class="gif" src="img/gifKen.gif" alt="ken" onclick="seleccionarLuchador('ken')">
-            <img id="fight" src="img/fight.png" alt="fight" onclick="cambiarPantalla('pantallaLucha')">
+            <img id="fight" src="img/fight.png" alt="fight" >
             <img id="ryu" class="gif" src="img/gifRyu.gif" alt="ryu" onclick="seleccionarLuchador('ryu')">
             <img id="chunlee" class="gif" src="img/gifChunlee.gif" alt="chunlee" onclick="seleccionarLuchador('chunlee')">
         </div>
@@ -31,7 +32,7 @@
     <div id="pantallaLucha">
         <div id="luchaIz">
             <div id="luchadorIzPelea">
-                
+
             </div>
             <div id="vidaLuchadorIz">
                 <div id="marcadorVidaLuchadorIz"></div>
