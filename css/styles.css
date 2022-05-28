@@ -56,15 +56,17 @@ h1{
     height: 13em;
     width: 14em;
     border-radius: 3.5em;;
-    background-color: rgba(0, 0, 0, 0.498);
+    background-color: rgba(0, 0, 0, 0.581);
     background-position-x: center;
     background-position-y: center;
     background-image: url(/img/logo.png);
-    box-shadow: 0.1em 0.1em 1em 0.2em black;   
+    box-shadow: -0.1em 0.0em 0.3em 0.2em rgba(245, 245, 245, 0.752);   
 }
 #iconoSf:active{
     transition: 0.5s;
     transform: scale(0.96);
+    box-shadow: 0em, whitesmoke;   
+
 }
 
     /* PANTALLA SELECCION DE PERSONAJE */
@@ -99,17 +101,53 @@ h1{
     height: 13em;
 }
 #bison{
+    background-image: url(https://media.istockphoto.com/photos/red-smoke-background-picture-id1077386668?b=1&k=20&m=1077386668&s=170667a&w=0&h=TpBC0MepCd4VoRd9d6r4oIcCy3krrI6C1PgpC5aIFDI=);
+    border-radius: 0.5em;
+    box-shadow: -0.1em 0.0em 0.4em 0.3em rgb(151, 1, 1);
     margin-right: 5em;
 }
+#bison:active{
+    transition: 0.5s;
+    transform: scale(0.95);
+}
 #ken{
+    background-image: url(https://previews.123rf.com/images/flwong88/flwong882003/flwong88200300191/141885033-white-graphic-color-patches-effect-design-on-yellow-background-element.jpg);
+    border-radius: 0.5em;
+    box-shadow: -0.1em 0.0em 0.3em 0.3em rgb(151, 151, 1);
+    padding-left: 2em;
+    padding-right: 2em;
     margin-right: 2em;
+}
+#ken:active{
+    transition: 0.5s;
+    transform: scale(0.95);
 }
 #fight{
     height: 15em;
     margin-right: 2em;
 }
 #ryu{
+    background-image: url(https://images.unsplash.com/photo-1585644156378-72d15fa33be5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBzbW9rZXxlbnwwfHwwfHw%3D&w=1000&q=80);
+    border-radius: 0.5em;
+    box-shadow: -0.1em 0.0em 0.3em 0.2em rgb(163, 163, 163);
+    padding-left: 2em;
+    padding-right: 2em;
     margin-right: 5em;
+}
+#ryu:active{
+    transition: 0.5s;
+    transform: scale(0.95);
+}
+#chunlee{
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190903/pngtree-blue-fog-background-smoke-abstract-texture-image_313036.jpg);
+    border-radius: 0.5em;
+    box-shadow: -0.1em 0.0em 0.3em 0.2em rgb(1, 9, 162);
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#chunlee:active{
+    transition: 0.5s;
+    transform: scale(0.95);
 }
         /* PANTALLA DE LUCHA */
 
