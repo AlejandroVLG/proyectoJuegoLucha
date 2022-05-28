@@ -13,7 +13,7 @@ const cambiarPantalla = (screenDestino) => {
                 document.getElementById(screen).style.display = "none";
             };
         };
-    }, 1500);
+    }, 500);
 }
 
 const seleccionarLuchador = (luchador) => {
@@ -25,7 +25,7 @@ const seleccionarLuchador = (luchador) => {
         setTimeout(()=>{
             let opaco = document.getElementById(luchador);
             opaco.style.opacity = 0.4;
-        }, 200);
+        }, 100);
         if(luchadores.length == 2){
             pantalla
         }

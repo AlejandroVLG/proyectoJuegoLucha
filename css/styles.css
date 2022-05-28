@@ -110,10 +110,57 @@ h1{
     justify-content: center;
     align-items: center;
 }
+
+    /* ZONA IZQUIERDA PANTALLA DE LUCHA  */
+
 #luchaIz{
     height: 100vh;
     width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+#luchadorIzPelea{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#vidaLuchadorIz{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+#marcadorVidaLuchadorIz{
+    height: 4em;
+    width: 25em;
+    border-radius: 5em;
+    background-color: green;
+}
+#nombreVidaLuchadorIz{
+    height: 2em;
+    width: 20em;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    background-color: red;
+}
+#iconoPegarLuchadorIz{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+        /* ZONA CENTRO PANTALLA DE LUCHA  */
+
 #luchaCentro{
     height: 100vh;
     width: 34%;
@@ -121,10 +168,54 @@ h1{
     justify-content: center;
     align-items: center;
 }
+#versus{
+    height: 15em;
+}
+
+        /* ZONA DERECHA PANTALLA DE LUCHA */
+
 #luchaDrch{
     height: 100vh;
     width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#versus{
-    height: 15em;
+#luchadorDrchPelea{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#vidaLuchadorDrch{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+#marcadorVidaLuchadorDrch{
+    height: 4em;
+    width: 25em;
+    border-radius: 5em;
+    background-color: green;
+}
+#nombreVidaLuchadorDrch{
+    height: 2em;
+    width: 20em;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    background-color: red;
+}
+#iconoPegarLuchadorDrch{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

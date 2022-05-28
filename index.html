@@ -28,12 +28,28 @@
             <img id="chunlee" class="gif" src="img/gifChunlee.gif" alt="chunlee" onclick="seleccionarLuchador('chunlee')">
         </div>
     </div> <!-- PANTALLA DE LUCHA -->
-    <div id="pantallaLucha" onclick="cambiarPantalla('pantallaPrincipal')">
-        <div id="luchaIz"></div>
-        <div id="luchaCentro">
-            <img id="versus" src="img/Vs.png" alt="versus">
+    <div id="pantallaLucha">
+        <div id="luchaIz">
+            <div id="luchadorIzPelea">
+                
+            </div>
+            <div id="vidaLuchadorIz">
+                <div id="marcadorVidaLuchadorIz"></div>
+                <div id="nombreVidaLuchadorIz">Nombre</div>
+            </div>
+            <div id="iconoPegarLuchadorIz"></div>
         </div>
-        <div id="luchaDrch"></div>
+        <div id="luchaCentro">
+            <img id="versus" src="img/Vs.png" alt="versus" onclick="cambiarPantalla('pantallaPrincipal')">
+        </div>
+        <div id="luchaDrch">
+            <div id="luchadorDrchPelea"></div>
+            <div id="vidaLuchadorDrch">
+                <div id="marcadorVidaLuchadorDrch"></div>
+                <div id="nombreVidaLuchadorDrch">Nombre</div>
+            </div>
+            <div id="iconoPegarLuchadorDrch"></div>
+        </div>
     </div>
     
     <script src="js/main.js"></script>
