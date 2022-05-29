@@ -40,9 +40,9 @@ const seleccionarLuchador = (luchador) => {
                 setTimeout(()=>{             
                     pantallaDeLuchaLuchadores.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0].nombre}.gif' alt='luchador1'></div><div id="huecoIconoCentroSuperior"><img id="versus" src="img/Vs.png" alt="versus"></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`;
 
-                    pantallaDeLuchaNombresIz.innerHTML = `<div id="nombreVidaLuchadorIz">${luchadores[0].nombre}</div><div id="marcadorVidaLuchadorIz"></div>`;
+                    pantallaDeLuchaNombresIz.innerHTML = `<div id="nombreVidaLuchadorIz">${luchadores[0].nombre}</div><div id="marcadorVidaLuchadorIz1"></div>`;
 
-                    pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreVidaLuchadorDrch">${luchadores[1].nombre}</div><div id="marcadorVidaLuchadorDrch"></div>`;
+                    pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreVidaLuchadorDrch">${luchadores[1].nombre}</div><div id="marcadorVidaLuchadorDrch1"></div>`;
 
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
