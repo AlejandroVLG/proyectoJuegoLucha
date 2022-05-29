@@ -8,6 +8,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
     /*  PANTALLA DE INICIO */
 
 #pantallaPrincipal{
@@ -137,6 +138,7 @@ h1{
     transition: 0.5s;
     transform: scale(0.95);
 }
+
         /* PANTALLA DE LUCHA */
 
 #pantallaLucha{
@@ -150,54 +152,9 @@ h1{
     align-items: center;
 }
 
-    /* ZONA SUPERIOR PANTALLA DE LUCHA  */
+    /* ZONA SUPERIOR PANTALLA DE LUCHA */
 
 #mitadSuperior{
-    height: 65%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-    /* ZONA SUPERIOR IZQUIERDA PANTALLA DE LUCHA*/
-
-#imagenLuchadorIz{
-    height: 65%;
-    width: 33%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-    /* ZONA SUPERIOR CENTRAL PANTALLA DE LUCHA*/
-
-#huecoIconoCentroSuperior{
-    height: 100vh;
-    width: 34%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#versus{
-    margin-top: 10em;
-    height: 15em;
-}
-
-    /* ZONA SUPERIOR DERECHA PANTALLA DE LUCHA*/
-    
-
-#imagenLuchadorDrch{
-    height: 65%;
-    width: 33%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-    /* ZONA INFERIOR PANTALLA DE LUCHA */
-
-#mitadInferior{
     height: 35%;
     width: 100%;
     display: flex;
@@ -206,7 +163,7 @@ h1{
     align-items: center;
 }
 
-    /* ZONA INFERIOR IZQUIERDA PANTALLA DE LUCHA  */
+    /* ZONA SUPERIOR IZQUIERDA PANTALLA DE LUCHA  */
 
 #indicadoresIz{
     height: 100vh;
@@ -226,12 +183,12 @@ h1{
     gap: 0.5em;
 }
 #marcadorVidaLuchadorIz{
-    height: 4em;
+    height: 3em;
     width: 25em;
     border: solid black 0.1em;
-    border-radius: 5em;
+    border-radius: 0.7em;
     background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
-    box-shadow: 0em 0.0em 0.4em 0.2em rgb(0, 0, 0);
+    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
 }
 #nombreVidaLuchadorIz{
     height: 2em;
@@ -255,7 +212,7 @@ h1{
     align-items: center;
 }
 
-    /* ZONA INFERIOR CENTRAL PANTALLA DE LUCHA  */
+    /* ZONA SUPERIOR CENTRAL PANTALLA DE LUCHA  */
 
 #huecoIconoCentroInferior{
     height: 100vh;
@@ -265,7 +222,7 @@ h1{
     align-items: center;
 }
 
-    /* ZONA INFERIOR DERECHA PANTALLA DE LUCHA  */
+    /* ZONA SUPERIOR DERECHA PANTALLA DE LUCHA  */
     
 #indicadoresDrch{
     height: 100vh;
@@ -285,12 +242,12 @@ h1{
     gap: 0.5em;
 }
 #marcadorVidaLuchadorDrch{
-    height: 4em;
+    height: 3em;
     width: 25em;
     border: solid black 0.1em;
-    border-radius: 5em;
+    border-radius: 0.7em;
     background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
-    box-shadow: 0em 0.0em 0.4em 0.2em rgb(0, 0, 0);
+    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
 }
 #nombreVidaLuchadorDrch{
     height: 2em;
@@ -312,4 +269,50 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+    /* ZONA INFERIOR PANTALLA DE LUCHA  */
+
+#mitadInferior{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* ZONA INFERIOR IZQUIERDA PANTALLA DE LUCHA*/
+
+#imagenLuchadorIz{
+    height: 65%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4em;
+}
+    /* ZONA INFERIOR CENTRAL PANTALLA DE LUCHA*/
+
+#huecoIconoCentroSuperior{
+    height: 100vh;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#versus{
+    height: 15em;
+    margin-bottom: 10em;
+}
+
+    /* ZONA INFERIOR DERECHA PANTALLA DE LUCHA*/
+    
+#imagenLuchadorDrch{
+    height: 65%;
+    width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1em;
 }

@@ -1,6 +1,6 @@
 let luchadores = [];
 
-let pantallaDeLuchaLuchadores = document.getElementById("mitadSuperior");
+let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 
 let pantallaDeLuchaNombresIz = document.getElementById("vidaLuchadorIz");
 
