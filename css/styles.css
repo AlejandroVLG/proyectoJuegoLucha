@@ -214,8 +214,8 @@ h1{
 
     /* ZONA SUPERIOR CENTRAL PANTALLA DE LUCHA  */
 
-#huecoIconoCentroInferior{
-    height: 100vh;
+#huecoIconoCentroSuperior{
+    height: 35%;
     width: 34%;
     display: flex;
     justify-content: center;
@@ -294,8 +294,8 @@ h1{
 }
     /* ZONA INFERIOR CENTRAL PANTALLA DE LUCHA*/
 
-#huecoIconoCentroSuperior{
-    height: 100vh;
+#huecoIconoCentroInferior{
+    height: 65%;
     width: 34%;
     display: flex;
     justify-content: center;
