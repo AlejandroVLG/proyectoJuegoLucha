@@ -28,13 +28,13 @@ const seleccionarLuchador = (luchador) => {
             let opaco = document.getElementById(luchador);
             opaco.style.opacity = 0.4;
         }, 100);
-        if(luchadores.length === 2){
+        if(luchadores.length == 2){
             setTimeout(()=>{
                 let animacionfight = document.getElementById("fight");
                 animacionfight.style.hover = 1;
 
-                setTimeout(()=>{               
-                    pantallaDeLucha.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0]}.gif' alt='luchador1'></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`
+                setTimeout(()=>{             
+                    pantallaDeLucha.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0].nombre}.gif' alt='luchador1'></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`;
     
     
                     setTimeout(()=>{

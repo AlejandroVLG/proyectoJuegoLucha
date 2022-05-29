@@ -63,9 +63,7 @@ h1{
     box-shadow: -0.1em 0.0em 0.3em 0.2em rgba(245, 245, 245, 0.752);   
 }
 #iconoSf:active{
-    transition: 0.5s;
     transform: scale(0.96);
-    box-shadow: 0em, whitesmoke;   
 }
 
     /* PANTALLA SELECCION DE PERSONAJE */
@@ -97,17 +95,16 @@ h1{
         /* PERSONAJES SELECCIONABLES */
 
 .gif{
-    height: 13em;
+    height: 15em;
+}
+.gif:active{
+    transform: scale(0.95);
 }
 #bison{
     background-image: url(https://media.istockphoto.com/photos/red-smoke-background-picture-id1077386668?b=1&k=20&m=1077386668&s=170667a&w=0&h=TpBC0MepCd4VoRd9d6r4oIcCy3krrI6C1PgpC5aIFDI=);
     border-radius: 0.5em;
     box-shadow: -0.1em 0.0em 0.4em 0.3em rgb(151, 1, 1);
-    margin-right: 5em;
-}
-#bison:active{
-    transition: 0.5s;
-    transform: scale(0.95);
+    margin-right: 3em;
 }
 #ken{
     background-image: url(https://previews.123rf.com/images/flwong88/flwong882003/flwong88200300191/141885033-white-graphic-color-patches-effect-design-on-yellow-background-element.jpg);
@@ -115,15 +112,11 @@ h1{
     box-shadow: -0.1em 0.0em 0.3em 0.3em rgb(151, 151, 1);
     padding-left: 2em;
     padding-right: 2em;
-    margin-right: 2em;
-}
-#ken:active{
-    transition: 0.5s;
-    transform: scale(0.95);
+    margin-right: -2em;
 }
 #fight{
     height: 15em;
-    margin-right: 2em;
+    margin-right: -1em;
 }
 #ryu{
     background-image: url(https://images.unsplash.com/photo-1585644156378-72d15fa33be5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8d2hpdGUlMjBzbW9rZXxlbnwwfHwwfHw%3D&w=1000&q=80);
@@ -131,11 +124,7 @@ h1{
     box-shadow: -0.1em 0.0em 0.3em 0.2em rgb(163, 163, 163);
     padding-left: 2em;
     padding-right: 2em;
-    margin-right: 5em;
-}
-#ryu:active{
-    transition: 0.5s;
-    transform: scale(0.95);
+    margin-right: 3em;
 }
 #chunlee{
     background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190903/pngtree-blue-fog-background-smoke-abstract-texture-image_313036.jpg);
@@ -246,8 +235,10 @@ h1{
 #marcadorVidaLuchadorIz{
     height: 4em;
     width: 25em;
+    border: solid black 0.1em;
     border-radius: 5em;
-    background-color: green;
+    background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
+    box-shadow: 0em 0.0em 0.4em 0.2em rgb(0, 0, 0);
 }
 #nombreVidaLuchadorIz{
     height: 2em;
@@ -289,8 +280,11 @@ h1{
 #marcadorVidaLuchadorDrch{
     height: 4em;
     width: 25em;
+    border: solid black 0.1em;
     border-radius: 5em;
-    background-color: green;
+    background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
+    box-shadow: 0em 0.0em 0.4em 0.2em rgb(0, 0, 0);
+
 }
 #nombreVidaLuchadorDrch{
     height: 2em;
