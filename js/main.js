@@ -1,6 +1,10 @@
 let luchadores = [];
 
-let pantallaDeLucha = document.getElementById("mitadSuperior");
+let pantallaDeLuchaLuchadores = document.getElementById("mitadSuperior");
+
+let pantallaDeLuchaNombresIz = document.getElementById("vidaLuchadorIz");
+
+let pantallaDeLuchaNombresDrch = document.getElementById("vidaLuchadorDrch");
 
 const cambiarPantalla = (screenDestino) => {
 
@@ -34,15 +38,17 @@ const seleccionarLuchador = (luchador) => {
                 animacionfight.style.hover = 1;
 
                 setTimeout(()=>{             
-                    pantallaDeLucha.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0].nombre}.gif' alt='luchador1'></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`;
-    
-    
+                    pantallaDeLuchaLuchadores.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0].nombre}.gif' alt='luchador1'></div><div id="huecoIconoCentroSuperior"><img id="versus" src="img/Vs.png" alt="versus"></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`;
+
+                    pantallaDeLuchaNombresIz.innerHTML = `<div id="nombreVidaLuchadorIz">${luchadores[0].nombre}</div><div id="marcadorVidaLuchadorIz"></div>`;
+
+                    pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreVidaLuchadorDrch">${luchadores[1].nombre}</div><div id="marcadorVidaLuchadorDrch"></div>`;
+
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
                     }, 1000);      
                 }, 500);
-            },500)
-            
+            },500) 
         };
     };
 }
