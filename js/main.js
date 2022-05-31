@@ -1,4 +1,6 @@
 let luchadores = [];
+let opaco;
+let animacionfight;
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
 let pantallaDeLuchaNombresDrch = document.getElementById("cajaNombreLuchadorDrch");
@@ -20,7 +22,7 @@ const cambiarPantalla = (screenDestino) => {
                 document.getElementById(screen).style.display = "none";
             };
         };
-    }, 900);
+    }, 500);
 }
 
 const seleccionarLuchador = (luchador) => {
@@ -30,13 +32,13 @@ const seleccionarLuchador = (luchador) => {
         luchadores.push(conjuntoLuchadores[luchador]);
         console.log(luchadores);
         setTimeout(()=>{
-            let opaco = document.getElementById(luchador);
-            opaco.style.opacity = 0.4;
+            opaco = document.getElementById(luchador);
+            opaco.style.opacity = 0.3;
 
         }, 100);
         if(luchadores.length == 2){
             setTimeout(()=>{
-                let animacionfight = document.getElementById("fight");
+                animacionfight = document.getElementById("fight");
                 animacionfight.style.hover = 1;
 
                 setTimeout(()=>{             
@@ -75,7 +77,7 @@ const luchar = () => {
             
             setTimeout(()=>{
                 cambiarPantalla("pantallaPrincipal");
-            }, 4500);   
+            }, 5500);   
 
         }else if (luchadores[1].vida <= 0){
 
@@ -85,7 +87,7 @@ const luchar = () => {
 
             setTimeout(()=>{
                 cambiarPantalla("pantallaPrincipal");
-            }, 4500);   
+            }, 5500);   
         };
 
     }else{
@@ -97,14 +99,16 @@ const luchar = () => {
 const reset = () => {
 
     luchadores = [];
+    luchador = "";
     random = "";
-    animacionfight = "";
-    opaco = "";
+    opaco.style.opacity = "";
     pantallaDeLuchaLuchadores.innerHTML = ``;
     pantallaDeLuchaNombresIz.innerHTML = ``;
     pantallaDeLuchaNombresDrch.innerHTML = ``;
     vidaIzquierda.style.width = ``;
-    vidaIzquierda.style.borderRadius = ``;
+    vidaIzquierda.style.borderRadius = "0.7em";
+    vidaDerecha.style.width = ``;
+    vidaDerecha.style.borderRadius = "0.7em";
     pantallaVictoria.innerHTML = ``;
     ryu.vida = 25;
     ken.vida = 25;
