@@ -1,18 +1,19 @@
 let luchadores = [];
-
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
 let pantallaDeLuchaNombresDrch = document.getElementById("cajaNombreLuchadorDrch");
 let vidaIzquierda = document.getElementById("marcadorVidaLuchadorIz");
 let vidaDerecha = document.getElementById("marcadorVidaLuchadorDrch");
 let golpear = document.getElementById("golpear");
+let pantallaVictoria = document.getElementById("pantallaVictoria")
+
 const cambiarPantalla = (screenDestino) => {
 
     setTimeout(()=>{
         let destino = document.getElementById(screenDestino);
         destino.style.display = "flex";
 
-        let arrayDestino = ["pantallaPrincipal", "pantallaSeleccionPj", "pantallaLucha"];
+        let arrayDestino = ["pantallaPrincipal", "pantallaSeleccionPj", "pantallaLucha", "pantallaVictoria"];
 
         for (let screen of arrayDestino){
             if (screen != screenDestino){
@@ -65,16 +66,48 @@ const luchar = () => {
 
         vidaIzquierda.style.width = `${luchadores[0].vida}em`;
         vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
-        if (vidaIzquierda.style.width < "40em"){
-            cambiarPantalla("pantallaPrincipal");
-        }else{
-        }
+        
+        if (luchadores[0].vida <= 0){
+
+            pantallaVictoria.innerHTML = `<img class="video" src="img/${luchadores[1].nombre}.mp4" alt="winnerVideo">`;
+               
+            cambiarPantalla("pantallaVictoria");
+            
+            setTimeout(()=>{
+                cambiarPantalla("pantallaPrincipal");
+            }, 4500);   
+
+        }else if (luchadores[1].vida <= 0){
+
+            pantallaVictoria.innerHTML = `<img class="video" src="img/${luchadores[0].nombre}.mp4" alt="winnerVideo">`;
+            
+            cambiarPantalla("pantallaVictoria");
+
+            setTimeout(()=>{
+                cambiarPantalla("pantallaPrincipal");
+            }, 4500);   
+        };
+
     }else{
         vidaDerecha.style.width = `${luchadores[1].vida}em`;
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
-        if (vidaDerecha.style.width == "0em"){
-            cambiarPantalla("pantallaPrincipal");
-        }else{
-        }
     };
+}
+
+const reset = () => {
+
+    luchadores = [];
+    random = "";
+    animacionfight = "";
+    opaco = "";
+    pantallaDeLuchaLuchadores.innerHTML = ``;
+    pantallaDeLuchaNombresIz.innerHTML = ``;
+    pantallaDeLuchaNombresDrch.innerHTML = ``;
+    vidaIzquierda.style.width = ``;
+    vidaIzquierda.style.borderRadius = ``;
+    pantallaVictoria.innerHTML = ``;
+    ryu.vida = 25;
+    ken.vida = 25;
+    bison.vida = 25;
+    chunlee.vida = 25;
 }

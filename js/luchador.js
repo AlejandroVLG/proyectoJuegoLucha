@@ -22,10 +22,10 @@ class Luchador {
     }
 }
 
-let ryu = new Luchador ("Ryu", 25, 95, 0.6, 5);
+let ryu = new Luchador ("Ryu", 90, 95, 0.6, 5);
 let ken = new Luchador ("Ken", 95, 80, 0.7, 4);
-let chunlee = new Luchador ("Chun-Lee", 80, 64, 0.9, 3.5);
-let bison = new Luchador ("M.Bison", 90, 0.7, 5.5);
+let chunlee = new Luchador ("Chun-Lee", 80, 65, 0.9, 3.5);
+let bison = new Luchador ("M.Bison", 90, 70, 0.7, 5.5);
 
 let conjuntoLuchadores = {
     "ryu": ryu,

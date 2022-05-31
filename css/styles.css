@@ -343,3 +343,23 @@ h1{
     justify-content: center;
     margin-top: -1em;
 }
+#pantallaVictoria{
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center; 
+}
+
+    /* PANTALLA VICTORIA */
+
+#pantallaVictoria{
+    background-color: black;
+}
+.video{
+    height: 50em;
+    background-size: cover;
+}
