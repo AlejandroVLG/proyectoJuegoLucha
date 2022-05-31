@@ -7,21 +7,25 @@ class Luchador {
     velocidad = 0.00;
     daño = 0.00;
 
-    constructor (nombre, vida, defensa, peso, velocidad, daño) {
+    constructor (nombre, defensa, peso, velocidad, daño) {
 
         this.nombre = nombre;
-        this.vida = vida;
+        this.vida = 25;
         this.defensa = defensa;
         this.peso = peso;
         this.velocidad = velocidad;
         this.daño = daño;
     };
+
+    golpear () {
+        this.vida = this.vida - (this.daño * this.velocidad);
+    }
 }
 
-let ryu = new Luchador ("Ryu", 90, 85, 95, 65, 85);
-let ken = new Luchador ("Ken", 85, 95, 80, 70, 80);
-let chunlee = new Luchador ("Chun-Lee", 80, 80, 64, 90, 75);
-let bison = new Luchador ("M.Bison", 100, 90, 60, 90);
+let ryu = new Luchador ("Ryu", 25, 95, 0.6, 5);
+let ken = new Luchador ("Ken", 95, 80, 0.7, 4);
+let chunlee = new Luchador ("Chun-Lee", 80, 64, 0.9, 3.5);
+let bison = new Luchador ("M.Bison", 90, 0.7, 5.5);
 
 let conjuntoLuchadores = {
     "ryu": ryu,

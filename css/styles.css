@@ -173,28 +173,20 @@ h1{
     justify-content: center;
     align-items: center;
 }
-#vidaLuchadorIz{
+#cajaNombreLuchadorIz{
     height: 15%;
-    width: 100%;
+    width: 15em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.5em;
 }
-#marcadorVidaLuchadorIz1{
-    height: 3em;
-    width: 25em;
-    border: solid black 0.1em;
-    border-radius: 0.7em;
-    background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
-    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
-}
-#nombreVidaLuchadorIz{
+#nombreLuchadorIz{
     height: 2em;
     width: 15em;
     padding-bottom: 0;
-    margin-bottom: -0.5em;
+    margin-bottom: -2.5em;
     color: white;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -203,6 +195,26 @@ h1{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+#cajaVidaLuchadorIz{
+    height: 3em;
+    width: 25em;
+    border: solid black 0.1em;
+    border-radius: 0.7em;
+    background: rgb(159, 1, 1);
+    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#marcadorVidaLuchadorIz{
+    height: 3em;
+    width: 25em;
+    border-radius:0.7em;
+    background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 #iconoPegarLuchadorIz{
     height: 20%;
@@ -221,6 +233,9 @@ h1{
     justify-content: center;
     align-items: center;
 }
+#golpear{
+    height: 10em;
+}
 
     /* ZONA SUPERIOR DERECHA PANTALLA DE LUCHA  */
     
@@ -232,28 +247,20 @@ h1{
     justify-content: center;
     align-items: center;
 }
-#vidaLuchadorDrch{
+#cajaNombreLuchadorDrch{
     height: 15%;
-    width: 100%;
+    width: 15em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5em;
 }
-#marcadorVidaLuchadorDrch1{
-    height: 3em;
-    width: 25em;
-    border: solid black 0.1em;
-    border-radius: 0.7em;
-    background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
-    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
-}
-#nombreVidaLuchadorDrch{
+#nombreLuchadorDrch{
     height: 2em;
     width: 15em;
     padding-bottom: 0;
-    margin-bottom: -0.5em;
+    margin-bottom: -2.5em;
     color: white;
     font-size: x-large;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -262,6 +269,26 @@ h1{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+#cajaVidaLuchadorDrch{
+    height: 3em;
+    width: 25em;
+    border: solid black 0.1em;
+    border-radius: 0.7em;
+    background: rgb(159, 1, 1);
+    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+#marcadorVidaLuchadorDrch{
+    height: 3em;
+    width: 25em;
+    border-radius:0.7em;
+    background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
+    display: flex;
+    align-items: center;
+    justify-items: center;
 }
 #iconoPegarLuchadorDrch{
     height: 20%;

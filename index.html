@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Proyecto juego de lucha</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -35,20 +35,23 @@
     <div id="pantallaLucha">
         <div id="mitadSuperior">
             <div id="indicadoresIz">
-                <div id="vidaLuchadorIz">
-                    <div id="nombreVidaLuchadorIz"></div>
-                    <div id="marcadorVidaLuchadorIz1"></div>
-                    <div id="marcadorVidaLuchadorIz2"></div>
+                <div id="cajaNombreLuchadorIz">
+                    <div id="nombreLuchadorIz"></div>
+                </div>
+                <div id="cajaVidaLuchadorIz">
+                    <div id="marcadorVidaLuchadorIz"></div>
                 </div>
                 <div id="iconoPegarLuchadorIz"></div>
             </div>
             <div id="huecoIconoCentroSuperior">
+                <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="luchar()">
             </div>
             <div id="indicadoresDrch">
-                <div id="vidaLuchadorDrch">
-                    <div id="nombreVidaLuchadorDrch"></div>
-                    <div id="marcadorVidaLuchadorDrch1"></div>
-                    <div id="marcadorVidaLuchadorDrch2"></div>
+                <div id="cajaNombreLuchadorDrch">
+                    <div id="nombreLuchadorDrch"></div>
+                </div>
+                <div id="cajaVidaLuchadorDrch">
+                    <div id="marcadorVidaLuchadorDrch"></div>
                 </div>
                 <div id="iconoPegarLuchadorDrch"></div>
             </div>
@@ -63,7 +66,7 @@
     </div>
 
     <script src="js/main.js"></script>
-    <script src="js/luchador.js"></script>
+    <script src="js/Luchador.js"></script>
 </body>
 
 </html>
