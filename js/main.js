@@ -7,7 +7,7 @@ let pantallaDeLuchaNombresDrch = document.getElementById("cajaNombreLuchadorDrch
 let vidaIzquierda = document.getElementById("marcadorVidaLuchadorIz");
 let vidaDerecha = document.getElementById("marcadorVidaLuchadorDrch");
 let golpear = document.getElementById("golpear");
-let pantallaVictoria = document.getElementById("pantallaVictoria")
+let pantallaVictoria = document.getElementById("pantallaVictoria");
 
 const cambiarPantalla = (screenDestino) => {
 
@@ -56,7 +56,6 @@ const seleccionarLuchador = (luchador) => {
         };
     };
 }
-
 const luchar = () => {
     document.getElementById("versus").style.display = "none";
     
@@ -89,7 +88,6 @@ const luchar = () => {
                 cambiarPantalla("pantallaPrincipal");
             }, 5500);   
         };
-
     }else{
         vidaDerecha.style.width = `${luchadores[1].vida}em`;
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
@@ -99,17 +97,15 @@ const luchar = () => {
 const reset = () => {
 
     luchadores = [];
-    luchador = "";
     random = "";
-    opaco.style.opacity = "";
-    pantallaDeLuchaLuchadores.innerHTML = ``;
-    pantallaDeLuchaNombresIz.innerHTML = ``;
-    pantallaDeLuchaNombresDrch.innerHTML = ``;
+    document.getElementById("ryu").style.opacity = 1;
+    document.getElementById("chunlee").style.opacity = 1;
+    document.getElementById("ken").style.opacity = 1;
+    document.getElementById("bison").style.opacity = 1;
     vidaIzquierda.style.width = ``;
     vidaIzquierda.style.borderRadius = "0.7em";
     vidaDerecha.style.width = ``;
     vidaDerecha.style.borderRadius = "0.7em";
-    pantallaVictoria.innerHTML = ``;
     ryu.vida = 25;
     ken.vida = 25;
     bison.vida = 25;
