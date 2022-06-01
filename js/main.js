@@ -9,6 +9,8 @@ let vidaDerecha = document.getElementById("marcadorVidaLuchadorDrch");
 let golpear = document.getElementById("golpear");
 let pantallaVictoria = document.getElementById("pantallaVictoria");
 
+        /* FUNCION PARA CAMBIAR DE PANTALLA */
+
 const cambiarPantalla = (screenDestino) => {
 
     setTimeout(()=>{
@@ -24,6 +26,7 @@ const cambiarPantalla = (screenDestino) => {
         };
     }, 500);
 }
+        /* FUNCION PARA SELECCIONAR LUCHADOR */
 
 const seleccionarLuchador = (luchador) => {
 
@@ -55,8 +58,10 @@ const seleccionarLuchador = (luchador) => {
             },500);
         };
     };
-}
-const luchar = () => {
+}       
+        /* FUNCION PARA OSTIARSE */
+
+const luchar = () => { 
     document.getElementById("versus").style.display = "none";
     
     let random = Math.round(Math.random());
@@ -73,8 +78,8 @@ const luchar = () => {
             pantallaVictoria.innerHTML = `<img class="video" src="img/${luchadores[1].nombre}.mp4" alt="winnerVideo">`;
                
             cambiarPantalla("pantallaVictoria");
-            
-            setTimeout(()=>{
+                   
+            setTimeout(()=>{ ∑ 
                 cambiarPantalla("pantallaPrincipal");
             }, 5500);   
 
@@ -93,6 +98,8 @@ const luchar = () => {
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
     };
 }
+
+        /* FUNCION PARA RESETEAR VARIABLES */
 
 const reset = () => {
 

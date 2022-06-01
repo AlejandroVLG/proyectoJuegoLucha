@@ -19,7 +19,7 @@ class Luchador {
 
     golpear () {
         this.vida = this.vida - (this.daño * this.velocidad);
-    }
+    };
 }
 
 let ryu = new Luchador ("Ryu", 90, 95, 0.6, 5);
