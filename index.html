@@ -12,6 +12,7 @@
 <body>
     <!-- PANTALLA PINCIPAL -->
     <div id="pantallaPrincipal" onclick="reset()">
+        <audio src="audios/musicaMenuPrincipal.mp3" autoplay></audio>
         <div id="contenedorIcono">
             <div id="iconoParteSuperior"></div>
             <div id="iconoParteInferior">
@@ -40,10 +41,13 @@
                 <div id="cajaVidaLuchadorIz">
                     <div id="marcadorVidaLuchadorIz"></div>
                 </div>
-                <div id="iconoPegarLuchadorIz"></div>
+                <div id="iconoPegarLuchadorIz">
+                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="puño1()">
+                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="patada1()">
+                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="especial1()">
+                </div>
             </div>
             <div id="huecoIconoCentroSuperior">
-                <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="luchar()">
             </div>
             <div id="indicadoresDrch">
                 <div id="cajaNombreLuchadorDrch">
@@ -52,7 +56,11 @@
                 <div id="cajaVidaLuchadorDrch">
                     <div id="marcadorVidaLuchadorDrch"></div>
                 </div>
-                <div id="iconoPegarLuchadorDrch"></div>
+                <div id="iconoPegarLuchadorDrch">
+                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="puño2()">
+                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="patada2()">
+                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="especial2()">
+                </div>
             </div>
         </div>
         <div id="mitadInferior">

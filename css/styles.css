@@ -198,8 +198,7 @@ h1{
 }
 #cajaVidaLuchadorIz{
     height: 3em;
-    width: 25em;
-    border: solid black 0.1em;
+    width: 24em;
     border-radius: 0.7em;
     background: rgb(159, 1, 1);
     box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
@@ -209,7 +208,8 @@ h1{
 }
 #marcadorVidaLuchadorIz{
     height: 3em;
-    width: 25em;
+    width: 24em;
+    border: 0.1em solid black;
     border-radius:0.7em;
     background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
     display: flex;
@@ -234,7 +234,7 @@ h1{
     align-items: center;
 }
 #golpear{
-    height: 10em;
+    height: 7em;
 }
 
     /* ZONA SUPERIOR DERECHA PANTALLA DE LUCHA  */
@@ -272,18 +272,18 @@ h1{
 }
 #cajaVidaLuchadorDrch{
     height: 3em;
-    width: 25em;
-    border: solid black 0.1em;
+    width: 24em;
     border-radius: 0.7em;
     background: rgb(159, 1, 1);
-    box-shadow: 0em 0.0em 0.4em 0.1em rgb(0, 0, 0);
+    box-shadow: 0em 0.0em 0.4em 0.2em rgb(0, 0, 0);
     display: flex;
     align-items: center;
     justify-items: center;
 }
 #marcadorVidaLuchadorDrch{
     height: 3em;
-    width: 25em;
+    width: 24em;
+    border: 0.1em solid black;
     border-radius:0.7em;
     background: linear-gradient(to right, rgb(1, 76, 1), green, rgb(1, 197, 1));
     display: flex;
