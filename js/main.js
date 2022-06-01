@@ -75,23 +75,23 @@ const luchar = () => {
         
         if (luchadores[0].vida <= 0){
 
-            pantallaVictoria.innerHTML = `<img class="video" src="img/${luchadores[1].nombre}.mp4" alt="winnerVideo">`;
+            pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
             cambiarPantalla("pantallaVictoria");
                    
-            setTimeout(()=>{ ∑ 
+            setTimeout(()=>{ 
                 cambiarPantalla("pantallaPrincipal");
-            }, 5500);   
+            }, 7500);   
 
         }else if (luchadores[1].vida <= 0){
 
-            pantallaVictoria.innerHTML = `<img class="video" src="img/${luchadores[0].nombre}.mp4" alt="winnerVideo">`;
+            pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
             cambiarPantalla("pantallaVictoria");
 
             setTimeout(()=>{
                 cambiarPantalla("pantallaPrincipal");
-            }, 5500);   
+            }, 7500);   
         };
     }else{
         vidaDerecha.style.width = `${luchadores[1].vida}em`;
