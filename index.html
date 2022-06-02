@@ -11,10 +11,11 @@
 
 <body>
     <!-- PANTALLA PINCIPAL -->
-    <div id="pantallaPrincipal" onclick="reset()">
-        <audio src="audios/musicaMenuPrincipal.mp3" autoplay></audio>
+    <div id="pantallaPrincipal">
+        <div id="audioPrincipal">
+        </div>
         <div id="contenedorIcono">
-            <div id="iconoParteSuperior"></div>
+            <div id="iconoParteSuperior" onclick="reset()"></div>
             <div id="iconoParteInferior">
                 <div id="iconoSf" onclick="cambiarPantalla('pantallaSeleccionPj')">
                 </div>
@@ -25,6 +26,7 @@
     <div id="pantallaSeleccionPj">
         <div id="pantallaSeleccionSuperior"></div>
         <div id="pantallaSeleccionInferior">
+            <div id="audioSeleccion"></div>
             <img id="bison" class="gif" src="img/M.Bison.gif" alt="bison" onclick="seleccionarLuchador('bison')">
             <img id="ken" class="gif" src="img/Ken.gif" alt="ken" onclick="seleccionarLuchador('ken')">
             <img id="fight" src="img/fight.png" alt="fight">
@@ -42,9 +44,9 @@
                     <div id="marcadorVidaLuchadorIz"></div>
                 </div>
                 <div id="iconoPegarLuchadorIz">
-                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="puño1()">
-                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="patada1()">
-                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="especial1()">
+                    <img class="golpesIz" id="puñetazoIz" src="img/puño.jpeg" alt="puño" onclick="puño1()">
+                    <img class="golpesIz" id="patadaIz" src="img/puño.jpeg" alt="puño" onclick="patada1()">
+                    <img class="golpesIz" id="especialIz" src="img/puño.jpeg" alt="puño" onclick="especial1()">
                 </div>
             </div>
             <div id="huecoIconoCentroSuperior">
@@ -57,9 +59,9 @@
                     <div id="marcadorVidaLuchadorDrch"></div>
                 </div>
                 <div id="iconoPegarLuchadorDrch">
-                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="puño2()">
-                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="patada2()">
-                    <img id="golpear" src="img/puño.jpeg" alt="puño" onclick="especial2()">
+                    <img class="golpesDrch" id="puñetazoDrch" src="img/puño.jpeg" alt="puño" onclick="puño2()">
+                    <img class="golpesDrch" id="patadaIDrch" src="img/puño.jpeg" alt="puño" onclick="patada2()">
+                    <img class="golpesDrch" id="especialDrch" src="img/puño.jpeg" alt="puño" onclick="especial2()">
                 </div>
             </div>
         </div>

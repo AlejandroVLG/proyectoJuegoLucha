@@ -1,6 +1,6 @@
 let luchadores = [];
 let opaco;
-let animacionfight;
+let cargas = 0;
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
 let pantallaDeLuchaNombresDrch = document.getElementById("cajaNombreLuchadorDrch");
@@ -22,6 +22,8 @@ const cambiarPantalla = (screenDestino) => {
         for (let screen of arrayDestino){
             if (screen != screenDestino){
                 document.getElementById(screen).style.display = "none";
+                let audio = document.getElementById("audioPrincipal");
+                audio.innerHTML = `<audio src="audios/musicaMenuPrincipal.mp3" muted></audio>`;      
             };
         };
     }, 500);
@@ -40,9 +42,11 @@ const seleccionarLuchador = (luchador) => {
 
         }, 100);
         if(luchadores.length == 2){
+
             setTimeout(()=>{
-                animacionfight = document.getElementById("fight");
-                animacionfight.style.hover = 1;
+                document.getElementById("ken").style.boxShadow = `18em 0em 10em -0.2em rgb(255, 255, 255)`;
+                let audioSeleccion = document.getElementById("audioSeleccion");
+                audioSeleccion.innerHTML = `<audio src="audios/cambioPantalla.mp3" autoplay></audio>`;      
 
                 setTimeout(()=>{             
                     pantallaDeLuchaLuchadores.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0].nombre}.gif' alt='luchador1'></div><div id="huecoIconoCentroSuperior"><img id="versus" src="img/Vs.png" alt="versus"></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`;
@@ -53,7 +57,7 @@ const seleccionarLuchador = (luchador) => {
 
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
-                    }, 1000);      
+                    }, 2800);      
                 }, 500);
             },500);
         };
@@ -69,6 +73,11 @@ const puño1 = () => {
     
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+
+    if (luchadores[1].vida <= 16){
+        document.getElementById("especialIz").style.opacity = 1;
+        document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+    };
         
     if (luchadores[0].vida <= 0){
 
@@ -99,6 +108,11 @@ const patada1 = () => {
     
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+
+    if (luchadores[1].vida <= 16){
+        document.getElementById("especialIz").style.opacity = 1;
+        document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+    };
         
     if (luchadores[0].vida <= 0){
 
@@ -124,12 +138,13 @@ const patada1 = () => {
 const especial1 = () => { 
 
     document.getElementById("versus").style.display = "none";
-
-    luchadores[1].golpeEspecial();
-    
-    vidaDerecha.style.width = `${luchadores[1].vida}em`;
-    vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+    if (luchadores[1].vida <= 16){
         
+        luchadores[1].golpeEspecial();
+        vidaDerecha.style.width = `${luchadores[1].vida}em`;
+        vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+    };
+       
     if (luchadores[0].vida <= 0){
 
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
@@ -162,6 +177,11 @@ const puño2 = () => {
     
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
+
+    if (luchadores[0].vida <= 16){
+        document.getElementById("especialDrch").style.opacity = 1;
+        document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+    };
         
     if (luchadores[0].vida <= 0){
 
@@ -189,10 +209,15 @@ const patada2 = () => {
     document.getElementById("versus").style.display = "none";
 
     luchadores[0].patadon();
-    
+
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
-        
+
+    if (luchadores[0].vida <= 16){
+        document.getElementById("especialDrch").style.opacity = 1;
+        document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+    };
+    
     if (luchadores[0].vida <= 0){
 
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
@@ -218,11 +243,13 @@ const especial2 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    luchadores[0].golpeEspecial();
-    
-    vidaIzquierda.style.width = `${luchadores[0].vida}em`;
-    vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
-        
+    if(luchadores[0].vida <= 16){
+
+        luchadores[0].golpeEspecial();
+        vidaIzquierda.style.width = `${luchadores[0].vida}em`;
+        vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
+    };
+         
     if (luchadores[0].vida <= 0){
 
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
@@ -254,6 +281,11 @@ const reset = () => {
     document.getElementById("chunlee").style.opacity = 1;
     document.getElementById("ken").style.opacity = 1;
     document.getElementById("bison").style.opacity = 1;
+    document.getElementById("especialIz").style.opacity = 0.3;
+    document.getElementById("especialIz").style.boxShadow = `0em 0.0em 0.3em 0.1em rgb(76, 0, 0)`
+    document.getElementById("especialDrch").style.opacity = 0.3;
+    document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 0.3em 0.1em rgb(76, 0, 0)`
+    document.getElementById("ken").style.boxShadow = `0em 0em 0em 0em rgb(255, 255, 255)`;
     vidaIzquierda.style.width = ``;
     vidaIzquierda.style.borderRadius = "0.7em";
     vidaDerecha.style.width = ``;
@@ -262,4 +294,6 @@ const reset = () => {
     ken.vida = 24;
     bison.vida = 24;
     chunlee.vida = 24;
+    audio = document.getElementById("audioPrincipal");
+    audio.innerHTML = `<audio src="audios/musicaMenuPrincipal.mp3" autoplay></audio>`;
 }
