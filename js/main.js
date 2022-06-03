@@ -41,12 +41,12 @@ const seleccionarLuchador = (luchador) => {
         setTimeout(()=>{
             opaco = document.getElementById(luchador);
             opaco.style.opacity = 0.3;
-
         }, 100);
+
         if(luchadores.length == 2){
 
             setTimeout(()=>{
-                document.getElementById("ken").style.boxShadow = `18em 0em 10em -0.2em rgb(255, 255, 255)`;
+
                 let audioSeleccion = document.getElementById("audioSeleccion");
                 audioSeleccion.innerHTML = `<audio src="audios/cambioPantalla.mp3" autoplay></audio>`;      
 
@@ -57,9 +57,9 @@ const seleccionarLuchador = (luchador) => {
 
                     pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreLuchadorDrch">${luchadores[1].nombre}</div>`;
 
-                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño1()"><img class="golpesIz" id="patadaIz" src="img/${luchadores[0].patadaImagen}.jpeg" alt="patada" onclick="patada1()"><img class="golpesIz" id="especialIz" src="img/${luchadores[0].especialImagen}.jpeg" alt="especial" onclick="especial1()">`
+                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño1()"><img class="golpesIz" id="patadaIz" src="img/${luchadores[0].patadaImagen}.jpeg" alt="patada" onclick="patada1()"><img class="golpesIz" id="especialIz" src="img/${luchadores[0].especialImagen}.jpeg" alt="especial" onclick="especial1()">`;
 
-                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño2()"><img class="golpesDrch" id="patadaIDrch" src="img/${luchadores[1].patadaImagen}.jpeg" alt="patada" onclick="patada2()"><img class="golpesDrch" id="especialDrch" src="img/${luchadores[1].especialImagen}.jpeg" alt="especial" onclick="especial2()">`
+                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño2()"><img class="golpesDrch" id="patadaIDrch" src="img/${luchadores[1].patadaImagen}.jpeg" alt="patada" onclick="patada2()"><img class="golpesDrch" id="especialDrch" src="img/${luchadores[1].especialImagen}.jpeg" alt="especial" onclick="especial2()">`;
 
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
@@ -84,7 +84,7 @@ const puño1 = () => {
 
     if (cargas >= 4){
         document.getElementById("especialIz").style.opacity = 1;
-        document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+        document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
         
     if (luchadores[0].vida <= 0){
@@ -114,14 +114,14 @@ const patada1 = () => {
 
     luchadores[1].patadon();
     
-    cargas ++
+    cargas ++;
 
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
     if (cargas >= 4){
         document.getElementById("especialIz").style.opacity = 1;
-        document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+        document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
         
     if (luchadores[0].vida <= 0){
@@ -148,7 +148,7 @@ const patada1 = () => {
 const especial1 = () => { 
 
     document.getElementById("versus").style.display = "none";
-    
+
     if (cargas >= 4){
         
         luchadores[1].golpeEspecial();
@@ -183,17 +183,17 @@ const especial1 = () => {
 const puño2 = () => { 
 
     document.getElementById("versus").style.display = "none";
-
+        
     luchadores[0].puño();
-    
-    cargas ++;
 
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
 
+    cargas ++;
+
     if (cargas >= 4){
         document.getElementById("especialDrch").style.opacity = 1;
-        document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+        document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
         
     if (luchadores[0].vida <= 0){
@@ -223,14 +223,14 @@ const patada2 = () => {
 
     luchadores[0].patadon();
 
-    cargas ++
+    cargas ++;
 
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
 
     if (cargas >= 4){
         document.getElementById("especialDrch").style.opacity = 1;
-        document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
+        document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
     
     if (luchadores[0].vida <= 0){
@@ -292,15 +292,15 @@ const reset = () => {
 
     luchadores = [];
     random = "";
+    cargas = 0;
     document.getElementById("ryu").style.opacity = 1;
     document.getElementById("chunlee").style.opacity = 1;
     document.getElementById("ken").style.opacity = 1;
     document.getElementById("bison").style.opacity = 1;
     document.getElementById("especialIz").style.opacity = 0.3;
-    document.getElementById("especialIz").style.boxShadow = `0em 0.0em 0.3em 0.1em rgb(76, 0, 0)`
+    document.getElementById("especialIz").style.boxShadow = `0em 0.0em 0.3em 0.1em rgb(76, 0, 0)`;
     document.getElementById("especialDrch").style.opacity = 0.3;
-    document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 0.3em 0.1em rgb(76, 0, 0)`
-    document.getElementById("ken").style.boxShadow = `0em 0em 0em 0em rgb(255, 255, 255)`;
+    document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 0.3em 0.1em rgb(76, 0, 0)`;
     vidaIzquierda.style.width = ``;
     vidaIzquierda.style.borderRadius = "0.7em";
     vidaDerecha.style.width = ``;

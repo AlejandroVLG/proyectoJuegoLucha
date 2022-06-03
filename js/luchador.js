@@ -19,7 +19,7 @@ class Luchador {
         this.especial = especial;
         this.puñetazoImagen = puñetazoImagen;
         this.patadaImagen = patadaImagen;
-        this.especialImagen = especialImagen
+        this.especialImagen = especialImagen;
     };
 
     puño () {
