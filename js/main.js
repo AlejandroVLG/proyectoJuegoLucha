@@ -4,6 +4,8 @@ let cargas = 0;
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
 let pantallaDeLuchaNombresDrch = document.getElementById("cajaNombreLuchadorDrch");
+let iconosGolpesIz = document.getElementById("iconoPegarLuchadorIz");
+let iconosGolpesDrch = document.getElementById("iconoPegarLuchadorDrch");
 let vidaIzquierda = document.getElementById("marcadorVidaLuchadorIz");
 let vidaDerecha = document.getElementById("marcadorVidaLuchadorDrch");
 let golpear = document.getElementById("golpear");
@@ -55,6 +57,10 @@ const seleccionarLuchador = (luchador) => {
 
                     pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreLuchadorDrch">${luchadores[1].nombre}</div>`;
 
+                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño1()"><img class="golpesIz" id="patadaIz" src="img/${luchadores[0].patadaImagen}.jpeg" alt="patada" onclick="patada1()"><img class="golpesIz" id="especialIz" src="img/${luchadores[0].especialImagen}.jpeg" alt="especial" onclick="especial1()">`
+
+                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño2()"><img class="golpesDrch" id="patadaIDrch" src="img/${luchadores[1].patadaImagen}.jpeg" alt="patada" onclick="patada2()"><img class="golpesDrch" id="especialDrch" src="img/${luchadores[1].especialImagen}.jpeg" alt="especial" onclick="especial2()">`
+
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
                     }, 2800);      
@@ -71,10 +77,12 @@ const puño1 = () => {
 
     luchadores[1].puño();
     
+    cargas ++;
+
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (luchadores[1].vida <= 16){
+    if (cargas >= 4){
         document.getElementById("especialIz").style.opacity = 1;
         document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
     };
@@ -106,10 +114,12 @@ const patada1 = () => {
 
     luchadores[1].patadon();
     
+    cargas ++
+
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (luchadores[1].vida <= 16){
+    if (cargas >= 4){
         document.getElementById("especialIz").style.opacity = 1;
         document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
     };
@@ -138,7 +148,8 @@ const patada1 = () => {
 const especial1 = () => { 
 
     document.getElementById("versus").style.display = "none";
-    if (luchadores[1].vida <= 16){
+    
+    if (cargas >= 4){
         
         luchadores[1].golpeEspecial();
         vidaDerecha.style.width = `${luchadores[1].vida}em`;
@@ -175,10 +186,12 @@ const puño2 = () => {
 
     luchadores[0].puño();
     
+    cargas ++;
+
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (luchadores[0].vida <= 16){
+    if (cargas >= 4){
         document.getElementById("especialDrch").style.opacity = 1;
         document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
     };
@@ -210,10 +223,12 @@ const patada2 = () => {
 
     luchadores[0].patadon();
 
+    cargas ++
+
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (luchadores[0].vida <= 16){
+    if (cargas >= 4){
         document.getElementById("especialDrch").style.opacity = 1;
         document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`
     };
@@ -243,7 +258,7 @@ const especial2 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    if(luchadores[0].vida <= 16){
+    if(cargas >= 4){
 
         luchadores[0].golpeEspecial();
         vidaIzquierda.style.width = `${luchadores[0].vida}em`;

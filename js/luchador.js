@@ -5,15 +5,21 @@ class Luchador {
     puñetazo = 0.0;
     patada = 0.0;
     especial = 0.0;
+    puñetazoImagen = "";
+    patadaImagen = "";
+    especialImagen = "";
     
 
-    constructor (nombre, puñetazo, patada, especial) {
+    constructor (nombre, puñetazo, patada, especial, puñetazoImagen, patadaImagen, especialImagen) {
 
         this.nombre = nombre;
         this.vida = 24;
         this.puñetazo = puñetazo;
         this.patada = patada;
         this.especial = especial;
+        this.puñetazoImagen = puñetazoImagen;
+        this.patadaImagen = patadaImagen;
+        this.especialImagen = especialImagen
     };
 
     puño () {
@@ -27,10 +33,10 @@ class Luchador {
     };
 }
 
-let ryu = new Luchador ("Ryu", 4, 2, 8);
-let ken = new Luchador ("Ken", 4, 2, 8);
-let chunlee = new Luchador ("Chun-Lee", 2, 4, 8);
-let bison = new Luchador ("M.Bison", 2, 4, 8);
+let ryu = new Luchador ("Ryu", 4, 2, 8, "puñetazoRyu", "patadaRyu", "especialRyu");
+let ken = new Luchador ("Ken", 4, 2, 8, "puñetazoKen", "patadaKen", "especialKen");
+let chunlee = new Luchador ("Chun-Lee", 2, 4, 8, "puñetazoChunlee", "patadaChunlee", "especialChunlee");
+let bison = new Luchador ("M.Bison", 2, 4, 8, "puñetazoBison", "patadaBison", "especialBison");
 
 let conjuntoLuchadores = {
     "ryu": ryu,
