@@ -25,13 +25,13 @@ class Luchador {
     };
 
     puño () {
-        this.vida = this.vida - this.puñetazo;
+        this.vida = this.vida - Math.round(Math.random(this.puñetazo)*this.puñetazo);
     };
     patadon () {
-        this.vida = this.vida - this.patada;
+        this.vida = this.vida - Math.round(Math.random(this.patada)*this.patada);
     };
     golpeEspecial () {
-        this.vida = this.vida - this.especial;
+        this.vida = this.vida - Math.round(Math.random(this.especial)*this.especial);
     };
 }
 

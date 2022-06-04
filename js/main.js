@@ -1,6 +1,8 @@
 let luchadores = [];
 let opaco;
 let cargas1 = 0;
+let cargasEspecial1 = 0;
+let cargasEspecial2 = 0;
 let cargas2 = 0;
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
@@ -151,7 +153,7 @@ const patada1 = () => {
     }else if (luchadores[1].vida <= 0){
 
         audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -166,12 +168,22 @@ const especial1 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    if (cargas1 >= 4){
+    cargasEspecial1 ++;
+
+    if (cargas1 >= 4){    
         
-        luchadores[1].golpeEspecial();
-        vidaDerecha.style.width = `${luchadores[1].vida}em`;
-        vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
-        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`
+        if(cargasEspecial1 <= 1){
+            
+            luchadores[1].golpeEspecial();
+            vidaDerecha.style.width = `${luchadores[1].vida}em`;
+            vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+
+            videoEspeciales.style.opacity = 1;
+            videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
+            setTimeout(()=>{
+            videoEspeciales.style.opacity = 0;
+            },6000);
+        };
     };
        
     if (luchadores[0].vida <= 0){
@@ -294,12 +306,23 @@ const especial2 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    if(cargas2 >= 4){
+    cargasEspecial2++;
+    
 
-        luchadores[0].golpeEspecial();
-        vidaIzquierda.style.width = `${luchadores[0].vida}em`;
-        vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
-        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
+    if (cargas1 >= 4){    
+        
+        if(cargasEspecial1 <= 1){
+            
+            luchadores[0].golpeEspecial();
+            vidaDerecha.style.width = `${luchadores[0].vida}em`;
+            vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+
+            videoEspeciales.style.opacity = 1;
+            videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
+            setTimeout(()=>{
+            videoEspeciales.style.opacity = 0;
+            },6000);
+        };
     };
          
     if (luchadores[0].vida <= 0){
@@ -336,6 +359,8 @@ const reset = () => {
     luchadores = [];
     random = "";
     cargas1 = 0;
+    cargasEspecial1 = 0;
+    cargasEspecial2 = 0;
     cargas2 = 0;
     document.getElementById("ryu").style.opacity = 1;
     document.getElementById("chunlee").style.opacity = 1;
@@ -355,4 +380,5 @@ const reset = () => {
     chunlee.vida = 24;
     audio = document.getElementById("audioPrincipal");
     audio.innerHTML = `<audio src="audios/musicaMenuPrincipal.mp3" autoplay></audio>`;
+    videoEspeciales.style.opacity = 0;
 }

@@ -257,7 +257,7 @@ h1{
     transform: scale(0.96);
 }
 #especialIz{
-    opacity: 0.3;
+    opacity: 0;
 }
 
     /* ZONA SUPERIOR CENTRAL PANTALLA DE LUCHA  */
@@ -348,7 +348,7 @@ h1{
     transform: scale(0.96);
 }
 #especialDrch{
-    opacity: 0.3;
+    opacity: 0;
 }
 
     /* ZONA INFERIOR PANTALLA DE LUCHA  */
