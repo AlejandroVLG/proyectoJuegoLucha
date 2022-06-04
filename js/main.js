@@ -1,6 +1,7 @@
 let luchadores = [];
 let opaco;
-let cargas = 0;
+let cargas1 = 0;
+let cargas2 = 0;
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
 let pantallaDeLuchaNombresDrch = document.getElementById("cajaNombreLuchadorDrch");
@@ -10,6 +11,8 @@ let vidaIzquierda = document.getElementById("marcadorVidaLuchadorIz");
 let vidaDerecha = document.getElementById("marcadorVidaLuchadorDrch");
 let golpear = document.getElementById("golpear");
 let pantallaVictoria = document.getElementById("pantallaVictoria");
+let audioCombate = document.getElementById("audio2");
+let videoEspeciales = document.getElementById("huecoIconoCentroSuperior");
 
         /* FUNCION PARA CAMBIAR DE PANTALLA */
 
@@ -47,8 +50,8 @@ const seleccionarLuchador = (luchador) => {
 
             setTimeout(()=>{
 
-                let audioSeleccion = document.getElementById("audioSeleccion");
-                audioSeleccion.innerHTML = `<audio src="audios/cambioPantalla.mp3" autoplay></audio>`;      
+                let audioSeleccion1 = document.getElementById("audioSeleccion");
+                audioSeleccion1.innerHTML = `<audio src="audios/cambioPantalla.mp3" autoplay></audio>`;      
 
                 setTimeout(()=>{             
                     pantallaDeLuchaLuchadores.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class='gif' src='img/${luchadores[0].nombre}.gif' alt='luchador1'></div><div id="huecoIconoCentroSuperior"><img id="versus" src="img/Vs.png" alt="versus"></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class='gif' src='img/${luchadores[1].nombre}.gif' alt='luchador2'></div>`;
@@ -63,6 +66,7 @@ const seleccionarLuchador = (luchador) => {
 
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
+                        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" autoplay></audio>`;
                     }, 2800);      
                 }, 500);
             },500);
@@ -77,71 +81,84 @@ const puño1 = () => {
 
     luchadores[1].puño();
     
-    cargas ++;
+    cargas1 ++;
 
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (cargas >= 4){
+    if (cargas1 >= 4){
         document.getElementById("especialIz").style.opacity = 1;
         document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
         
     if (luchadores[0].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
-               
+        
         cambiarPantalla("pantallaVictoria");
                    
         setTimeout(()=>{ 
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);   
 
     }else if (luchadores[1].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
         setTimeout(()=>{
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);  
-    }; 
+    };
 }
+
 const patada1 = () => { 
 
     document.getElementById("versus").style.display = "none";
 
     luchadores[1].patadon();
     
-    cargas ++;
+    cargas1 ++;
 
     vidaDerecha.style.width = `${luchadores[1].vida}em`;
     vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (cargas >= 4){
+    if (cargas1 >= 4){
         document.getElementById("especialIz").style.opacity = 1;
         document.getElementById("especialIz").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
         
     if (luchadores[0].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
         setTimeout(()=>{ 
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);   
 
     }else if (luchadores[1].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
         setTimeout(()=>{
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);  
     }; 
 }
@@ -149,31 +166,38 @@ const especial1 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    if (cargas >= 4){
+    if (cargas1 >= 4){
         
         luchadores[1].golpeEspecial();
         vidaDerecha.style.width = `${luchadores[1].vida}em`;
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`
     };
        
     if (luchadores[0].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
         setTimeout(()=>{ 
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);   
 
     }else if (luchadores[1].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
         setTimeout(()=>{
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);  
     }; 
 }
@@ -189,31 +213,37 @@ const puño2 = () => {
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    cargas ++;
+    cargas2 ++;
 
-    if (cargas >= 4){
+    if (cargas2 >= 4){
         document.getElementById("especialDrch").style.opacity = 1;
         document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
         
     if (luchadores[0].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
         setTimeout(()=>{ 
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);   
 
     }else if (luchadores[1].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
         setTimeout(()=>{
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);  
     }; 
 }
@@ -223,34 +253,40 @@ const patada2 = () => {
 
     luchadores[0].patadon();
 
-    cargas ++;
+    cargas2 ++;
 
     vidaIzquierda.style.width = `${luchadores[0].vida}em`;
     vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-    if (cargas >= 4){
+    if (cargas2 >= 4){
         document.getElementById("especialDrch").style.opacity = 1;
         document.getElementById("especialDrch").style.boxShadow = `0em 0.0em 2em 2em rgb(235, 231, 91)`;
     };
     
     if (luchadores[0].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
         setTimeout(()=>{ 
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);   
 
     }else if (luchadores[1].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
         setTimeout(()=>{
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);  
     }; 
 }
@@ -258,31 +294,38 @@ const especial2 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    if(cargas >= 4){
+    if(cargas2 >= 4){
 
         luchadores[0].golpeEspecial();
         vidaIzquierda.style.width = `${luchadores[0].vida}em`;
         vidaIzquierda.style.borderRadius = "0.7em 0em 0em 0.7em";
+        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
     };
          
     if (luchadores[0].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video' autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
         setTimeout(()=>{ 
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);   
 
     }else if (luchadores[1].vida <= 0){
 
+        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
         pantallaVictoria.innerHTML = `<video class='video'autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
         setTimeout(()=>{
             cambiarPantalla("pantallaPrincipal");
+            let botonReset = document.getElementById("iconoParteSuperior");
+            botonReset.innerHTML = `<h1 id="resetText" onclick="reset()">PRESS TO RESET</h1>`;
         }, 7500);  
     }; 
 }
@@ -292,7 +335,8 @@ const reset = () => {
 
     luchadores = [];
     random = "";
-    cargas = 0;
+    cargas1 = 0;
+    cargas2 = 0;
     document.getElementById("ryu").style.opacity = 1;
     document.getElementById("chunlee").style.opacity = 1;
     document.getElementById("ken").style.opacity = 1;
