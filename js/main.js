@@ -176,7 +176,7 @@ const especial1 = () => {
         videoEspeciales1.innerHTML = `<video class="especialVideo1" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
         setTimeout(()=>{
         videoEspeciales1.style.opacity = 0;
-        },6000);
+        },6500);
     };
        
     if (luchadores[0].vida <= 0){
@@ -308,7 +308,7 @@ const especial2 = () => {
         videoEspeciales2.innerHTML = `<video class="especialVideo2" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
         setTimeout(()=>{
         videoEspeciales2.style.opacity = 0;
-        },6000);
+        },6500);
     };
          
     if (luchadores[0].vida <= 0){
