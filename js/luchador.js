@@ -10,7 +10,6 @@ class Luchador {
     especialImagen = "";
     especialVideo = "";
     
-
     constructor (nombre, puñetazo, patada, especial, puñetazoImagen, patadaImagen, especialImagen, especialVideo) {
 
         this.nombre = nombre;
