@@ -172,7 +172,7 @@ const especial1 = () => {
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
         videoEspeciales.style.opacity = 1;
-        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
+        videoEspeciales.innerHTML = `<video class="especialVideo1" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
         setTimeout(()=>{
         videoEspeciales.style.opacity = 0;
         },6000);
@@ -298,13 +298,13 @@ const especial2 = () => {
 
     document.getElementById("versus").style.display = "none";
     
-    if (cargas1 >= 4){    
+    if (cargas2 >= 4){    
         luchadores[0].golpeEspecial();
         vidaDerecha.style.width = `${luchadores[0].vida}em`;
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
         videoEspeciales.style.opacity = 1;
-        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
+        videoEspeciales.innerHTML = `<video class="especialVideo2" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
         setTimeout(()=>{
         videoEspeciales.style.opacity = 0;
         },6000);

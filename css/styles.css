@@ -257,7 +257,7 @@ h1{
     transform: scale(0.96);
 }
 #especialIz{
-    opacity: 0e;
+    opacity: 0;
 }
 
     /* ZONA SUPERIOR CENTRAL PANTALLA DE LUCHA  */
@@ -269,7 +269,14 @@ h1{
     justify-content: center;
     align-items: center;
 }
-.especialVideo{
+.especialVideo1{
+    height: 12em;
+    border: 0.1em;
+    border-radius: 0.5em;
+    box-shadow: 0em 0.0em 0.4em 0.2em rgb(255, 255, 255);
+    
+}
+.especialVideo2{
     height: 12em;
     border: 0.1em;
     border-radius: 0.5em;
