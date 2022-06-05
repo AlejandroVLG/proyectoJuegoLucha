@@ -1,8 +1,6 @@
 let luchadores = [];
 let opaco;
 let cargas1 = 0;
-let cargasEspecial1 = 0;
-let cargasEspecial2 = 0;
 let cargas2 = 0;
 let pantallaDeLuchaLuchadores = document.getElementById("mitadInferior");
 let pantallaDeLuchaNombresIz = document.getElementById("cajaNombreLuchadorIz");
@@ -42,7 +40,7 @@ const seleccionarLuchador = (luchador) => {
     if (luchadores.length < 2){
 
         luchadores.push(conjuntoLuchadores[luchador]);
-        console.log(luchadores);
+
         setTimeout(()=>{
             opaco = document.getElementById(luchador);
             opaco.style.opacity = 0.3;
@@ -62,9 +60,9 @@ const seleccionarLuchador = (luchador) => {
 
                     pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreLuchadorDrch">${luchadores[1].nombre}</div>`;
 
-                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño1()"><img class="golpesIz" id="patadaIz" src="img/${luchadores[0].patadaImagen}.jpeg" alt="patada" onclick="patada1()"><img class="golpesIz" id="especialIz" src="img/${luchadores[0].especialImagen}.jpeg" alt="especial" onclick="especial1()">`;
+                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo"><img class="golpesIz" id="patadaIz" src="img/${luchadores[0].patadaImagen}.jpeg" alt="patada"><img class="golpesIz" id="especialIz" src="img/${luchadores[0].especialImagen}.jpeg" alt="especial">`;
 
-                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo" onclick="puño2()"><img class="golpesDrch" id="patadaIDrch" src="img/${luchadores[1].patadaImagen}.jpeg" alt="patada" onclick="patada2()"><img class="golpesDrch" id="especialDrch" src="img/${luchadores[1].especialImagen}.jpeg" alt="especial" onclick="especial2()">`;
+                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo"><img class="golpesDrch" id="patadaIDrch" src="img/${luchadores[1].patadaImagen}.jpeg" alt="patada"><img class="golpesDrch" id="especialDrch" src="img/${luchadores[1].especialImagen}.jpeg" alt="especial">`;
 
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
@@ -168,22 +166,16 @@ const especial1 = () => {
 
     document.getElementById("versus").style.display = "none";
 
-    cargasEspecial1 ++;
-
     if (cargas1 >= 4){    
-        
-        if(cargasEspecial1 <= 1){
-            
-            luchadores[1].golpeEspecial();
-            vidaDerecha.style.width = `${luchadores[1].vida}em`;
-            vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+        luchadores[1].golpeEspecial();
+        vidaDerecha.style.width = `${luchadores[1].vida}em`;
+        vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-            videoEspeciales.style.opacity = 1;
-            videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
-            setTimeout(()=>{
-            videoEspeciales.style.opacity = 0;
-            },6000);
-        };
+        videoEspeciales.style.opacity = 1;
+        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
+        setTimeout(()=>{
+        videoEspeciales.style.opacity = 0;
+        },6000);
     };
        
     if (luchadores[0].vida <= 0){
@@ -305,24 +297,17 @@ const patada2 = () => {
 const especial2 = () => { 
 
     document.getElementById("versus").style.display = "none";
-
-    cargasEspecial2++;
     
-
     if (cargas1 >= 4){    
-        
-        if(cargasEspecial1 <= 1){
-            
-            luchadores[0].golpeEspecial();
-            vidaDerecha.style.width = `${luchadores[0].vida}em`;
-            vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
+        luchadores[0].golpeEspecial();
+        vidaDerecha.style.width = `${luchadores[0].vida}em`;
+        vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
-            videoEspeciales.style.opacity = 1;
-            videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
-            setTimeout(()=>{
-            videoEspeciales.style.opacity = 0;
-            },6000);
-        };
+        videoEspeciales.style.opacity = 1;
+        videoEspeciales.innerHTML = `<video class="especialVideo" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
+        setTimeout(()=>{
+        videoEspeciales.style.opacity = 0;
+        },6000);
     };
          
     if (luchadores[0].vida <= 0){
@@ -352,15 +337,34 @@ const especial2 = () => {
         }, 7500);  
     }; 
 }
-        /* FUNCION PARA RESETEAR VARIABLES */
+
+        /* EVENTO KEYDOWN PARA TODAS LAS ACCIONES */
+
+const puño1KeyDownIz = document.getElementById("body");
+
+puño1KeyDownIz.addEventListener('keydown', (event) => {
+    const keyName = event.key;
+    if (keyName == 'q'){
+        return puño1();
+    }else if(keyName == 'w'){
+        return patada1();
+    }else if(keyName == 'e'){
+        return especial1();
+    }else if(keyName == 'p'){
+        return puño2();
+    }else if(keyName == 'o'){
+        return patada2();
+    }else if(keyName == 'i'){
+        return especial2();
+    };
+})
+        /* FUNCION PARA RESETEAR EL JUEGO */
 
 const reset = () => {
 
     luchadores = [];
     random = "";
     cargas1 = 0;
-    cargasEspecial1 = 0;
-    cargasEspecial2 = 0;
     cargas2 = 0;
     document.getElementById("ryu").style.opacity = 1;
     document.getElementById("chunlee").style.opacity = 1;
