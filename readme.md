@@ -1,5 +1,5 @@
 <p align="center">
-<img src="img/Geeks.png"></p>
+<img src="img/geeks.png"></p>
 
 <h2 align="center">PROYECTO JUEGO</h2>
 <p>Tercer proyecto realizado en geekshubs academy dividido en las siguientes partes:
