@@ -3,6 +3,8 @@
 
 <h2 align="center">PROYECTO JUEGO</h2>
 <p>Tercer proyecto realizado en geekshubs academy dividido en las siguientes partes:
+<br>
+<br>
 
 <p align="center">Pantalla principal del juego, con un botón que te da acceso a la siguiente pantalla.</p>
 <p align="center"><img src="img/Inicio.png"></p>
@@ -14,4 +16,4 @@
 <p align="center"><img src="img/Lucha.png"></p>
 
 <h5>LENGUAJES UTILIZADOS</h5>
-<p>En este proyecto se ha utilizado HTML5, CSS3 y JavaScript.</p>
+<p>En este proyecto se ha utilizado <link rel="stylesheet" href="img/html5.png">, CSS3 y JavaScript.</p>

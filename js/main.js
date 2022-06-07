@@ -345,19 +345,27 @@ const puño1KeyDownIz = document.getElementById("body");
 
 puño1KeyDownIz.addEventListener("keydown", (event) => {
     const keyName = event.key;
-    if (keyName == "q"){
-        return puño1();
-    }else if(keyName == "w"){
-        return patada1();
-    }else if(keyName == "e"){
-        return especial1();
-    }else if(keyName == "p"){
-        return puño2();
-    }else if(keyName == "o"){
-        return patada2();
-    }else if(keyName == "i"){
-        return especial2();
-    };
+
+    switch (keyName) {
+        case "q":
+            puño1();
+            break;
+        case "w":
+            patada1();
+            break;
+        case "e":
+            especial1();
+            break;
+        case "p":
+             puño2();
+            break;
+        case "o":
+            patada2();
+            break;
+        case "i": 
+            especial2();
+            break;
+    }
 })
         /* FUNCION PARA RESETEAR EL JUEGO */
 
