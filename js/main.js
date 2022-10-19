@@ -29,7 +29,7 @@ const cambiarPantalla = (screenDestino) => {
             if (screen != screenDestino){
                 document.getElementById(screen).style.display = "none";
                 let audio = document.getElementById("audioPrincipal");
-                audio.innerHTML = `<audio src="audios/musicaMenuPrincipal.mp3" muted></audio>`;      
+                audio.innerHTML = `<audio src="../audios/musicaMenuPrincipal.mp3" muted></audio>`;      
             };
         };
     }, 500);
@@ -52,22 +52,22 @@ const seleccionarLuchador = (luchador) => {
             setTimeout(()=>{
 
                 let audioSeleccion1 = document.getElementById("audioSeleccion");
-                audioSeleccion1.innerHTML = `<audio src="audios/cambioPantalla.mp3" autoplay></audio>`;      
+                audioSeleccion1.innerHTML = `<audio src="../audios/cambioPantalla.mp3" autoplay></audio>`;      
 
                 setTimeout(()=>{             
-                    pantallaDeLuchaLuchadores.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class="gif" src="img/${luchadores[0].nombre}.gif" alt="luchador1"></div><div id="huecoIconoCentroSuperior"><img id="versus" src="img/Vs.png" alt="versus"></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class="gif" src="img/${luchadores[1].nombre}.gif" alt="luchador2"></div>`;
+                    pantallaDeLuchaLuchadores.innerHTML = `<div class="luchadorFinal" id="imagenLuchadorIz"><img class="gif" src="../img/${luchadores[0].nombre}.gif" alt="luchador1"></div><div id="huecoIconoCentroSuperior"><img id="versus" src="../img/Vs.png" alt="versus"></div><div class="luchadorFinal" id="imagenLuchadorDrch"><img class="gif" src="../img/${luchadores[1].nombre}.gif" alt="luchador2"></div>`;
 
                     pantallaDeLuchaNombresIz.innerHTML = `<div id="nombreLuchadorIz">${luchadores[0].nombre}</div>`;
 
                     pantallaDeLuchaNombresDrch.innerHTML = `<div id="nombreLuchadorDrch">${luchadores[1].nombre}</div>`;
 
-                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo"><img class="golpesIz" id="patadaIz" src="img/${luchadores[0].patadaImagen}.jpeg" alt="patada"><img class="golpesIz" id="especialIz" src="img/${luchadores[0].especialImagen}.jpeg" alt="especial">`;
+                    iconosGolpesIz.innerHTML = `<img class="golpesIz" id="puñetazoIz" src="../img/${luchadores[0].puñetazoImagen}.jpeg" alt="puñetazo"><img class="golpesIz" id="patadaIz" src="../img/${luchadores[0].patadaImagen}.jpeg" alt="patada"><img class="golpesIz" id="especialIz" src="../img/${luchadores[0].especialImagen}.jpeg" alt="especial">`;
 
-                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo"><img class="golpesDrch" id="patadaIDrch" src="img/${luchadores[1].patadaImagen}.jpeg" alt="patada"><img class="golpesDrch" id="especialDrch" src="img/${luchadores[1].especialImagen}.jpeg" alt="especial">`;
+                    iconosGolpesDrch.innerHTML = `<img class="golpesDrch" id="puñetazoDrch" src="../img/${luchadores[1].puñetazoImagen}.jpeg" alt="puñetazo"><img class="golpesDrch" id="patadaIDrch" src="../img/${luchadores[1].patadaImagen}.jpeg" alt="patada"><img class="golpesDrch" id="especialDrch" src="../img/${luchadores[1].especialImagen}.jpeg" alt="especial">`;
 
                     setTimeout(()=>{
                         cambiarPantalla("pantallaLucha");
-                        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" autoplay></audio>`;
+                        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" autoplay></audio>`;
                     }, 2800);      
                 }, 500);
             },500);
@@ -94,8 +94,8 @@ const puño1 = () => {
         
     if (luchadores[0].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
         
         cambiarPantalla("pantallaVictoria");
                    
@@ -107,8 +107,8 @@ const puño1 = () => {
 
     }else if (luchadores[1].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -138,8 +138,8 @@ const patada1 = () => {
         
     if (luchadores[0].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
@@ -151,8 +151,8 @@ const patada1 = () => {
 
     }else if (luchadores[1].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -173,7 +173,7 @@ const especial1 = () => {
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
         videoEspeciales1.style.opacity = 1;
-        videoEspeciales1.innerHTML = `<video class="especialVideo1" autoplay src="videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
+        videoEspeciales1.innerHTML = `<video class="especialVideo1" autoplay src="../videos/${luchadores[0].especialVideo}.mp4" type="video/mp4"></video>`;
         setTimeout(()=>{
         videoEspeciales1.style.opacity = 0;
         },6500);
@@ -181,8 +181,8 @@ const especial1 = () => {
        
     if (luchadores[0].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
@@ -194,8 +194,8 @@ const especial1 = () => {
 
     }else if (luchadores[1].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -227,8 +227,8 @@ const puño2 = () => {
         
     if (luchadores[0].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
@@ -240,8 +240,8 @@ const puño2 = () => {
 
     }else if (luchadores[1].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -270,8 +270,8 @@ const patada2 = () => {
     
     if (luchadores[0].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
@@ -283,8 +283,8 @@ const patada2 = () => {
 
     }else if (luchadores[1].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -305,7 +305,7 @@ const especial2 = () => {
         vidaDerecha.style.borderRadius = "0.7em 0em 0em 0.7em";
 
         videoEspeciales2.style.opacity = 1;
-        videoEspeciales2.innerHTML = `<video class="especialVideo2" autoplay src="videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
+        videoEspeciales2.innerHTML = `<video class="especialVideo2" autoplay src="../videos/${luchadores[1].especialVideo}.mp4" type="video/mp4"></video>`;
         setTimeout(()=>{
         videoEspeciales2.style.opacity = 0;
         },6500);
@@ -313,8 +313,8 @@ const especial2 = () => {
          
     if (luchadores[0].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[1].nombre}.mp4" type="video/mp4"></video>`;
                
         cambiarPantalla("pantallaVictoria");
                    
@@ -326,8 +326,8 @@ const especial2 = () => {
 
     }else if (luchadores[1].vida <= 0){
 
-        audioCombate.innerHTML = `<audio src="audios/musicaPelea.mp3" muted></audio>`;
-        pantallaVictoria.innerHTML = `<video class="video" autoplay src="videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
+        audioCombate.innerHTML = `<audio src="../audios/musicaPelea.mp3" muted></audio>`;
+        pantallaVictoria.innerHTML = `<video class="video" autoplay src="../videos/${luchadores[0].nombre}.mp4" type="video/mp4"></video>`;
             
         cambiarPantalla("pantallaVictoria");
 
@@ -392,7 +392,7 @@ const reset = () => {
     bison.vida = 24;
     chunlee.vida = 24;
     audio = document.getElementById("audioPrincipal");
-    audio.innerHTML = `<audio src="audios/musicaMenuPrincipal.mp3" autoplay></audio>`;
+    audio.innerHTML = `<audio src="../audios/musicaMenuPrincipal.mp3" autoplay></audio>`;
     videoEspeciales1.style.opacity = 0;
     videoEspeciales2.style.opacity = 0;
 }
