@@ -10,20 +10,22 @@
 </head>
 
 <body id="body">
+
     <!-- PANTALLA PINCIPAL -->
+
     <div id="pantallaPrincipal">
-        <div id="audioPrincipal">
-        </div>
+        <div id="audioPrincipal"></div>
         <div id="contenedorIcono">
-            <div id="iconoParteSuperior">
-            </div>
+            <div id="iconoParteSuperior"></div>
             <div id="iconoParteInferior">
-                <div id="iconoSf" onclick="cambiarPantalla('pantallaSeleccionPj')">
-                </div>
+                <div id="iconoSf" onclick="cambiarPantalla('pantallaSeleccionPj')"></div>
                 <h1>Press to start</h1>
             </div>
         </div>
-    </div> <!-- PANTALLA DE SELECCION -->
+    </div>
+
+    <!-- PANTALLA DE SELECCION -->
+
     <div id="pantallaSeleccionPj">
         <div id="pantallaSeleccionSuperior">
             <div id="pantallaSeleccionSuperiorIz">
@@ -53,9 +55,12 @@
             <img id="fight" src="img/fight.png" alt="fight">
             <img id="ryu" class="gif" src="img/Ryu.gif" alt="ryu" onclick="seleccionarLuchador('ryu')">
             <img id="chunlee" class="gif" src="img/Chun-Lee.gif" alt="chunlee" onclick="seleccionarLuchador('chunlee')">
-            <div id="audioSeleccion" ></div>
+            <div id="audioSeleccion"></div>
         </div>
-    </div> <!-- PANTALLA DE LUCHA -->
+    </div>
+
+    <!-- PANTALLA DE LUCHA -->
+
     <div id="pantallaLucha">
         <div id="mitadSuperior">
             <div id="indicadoresIz">
@@ -65,8 +70,7 @@
                 <div id="cajaVidaLuchadorIz">
                     <div id="marcadorVidaLuchadorIz"></div>
                 </div>
-                <div id="iconoPegarLuchadorIz">
-                </div>
+                <div id="iconoPegarLuchadorIz"></div>
             </div>
             <div id="huecoIconoCentroSuperior">
                 <div id="huecoIconoCentroSuperior1"></div>
@@ -79,8 +83,7 @@
                 <div id="cajaVidaLuchadorDrch">
                     <div id="marcadorVidaLuchadorDrch"></div>
                 </div>
-                <div id="iconoPegarLuchadorDrch">
-                </div>
+                <div id="iconoPegarLuchadorDrch"></div>
             </div>
         </div>
         <div id="mitadInferior">
@@ -91,9 +94,11 @@
             <div class="luchadorFinal" id="imagenLuchadorDrch"></div>
         </div>
         <div id="audio2"></div>
-    </div> <!-- PANTALLA DE VICTORIA -->
-    <div id="pantallaVictoria">
     </div>
+
+    <!-- PANTALLA DE VICTORIA -->
+
+    <div id="pantallaVictoria"></div>
 
     <script src="js/main.js"></script>
     <script src="js/Luchador.js"></script>
