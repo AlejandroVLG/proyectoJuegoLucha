@@ -16,4 +16,4 @@
 <p align="center"><img src="img/Lucha.png"></p>
 
 <h5>LENGUAJES UTILIZADOS</h5>
-<p>En este proyecto se ha utilizado <link rel="stylesheet" href="img/html5.png">, CSS3 y JavaScript.</p>
+<p>Este proyecto se ha realizado usando HTML, CSS3 y JavaScript.</p>
