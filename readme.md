@@ -4,7 +4,7 @@
 <p>El objeto de este proyecto con fines de formación, el tercero de los que desarrollamos durante el bootcamp "Full Stack Developer" en GeeksHubs, es la realización de un minijuego para ejecutar en el navegador, que debe tener las siguientes características:
 
 
-Minimo de 5 vistas incluyendo los menús, diseñado como una single page application, incluyendo presentación, vista de selección, preparación, juego y ganador.
+Un mínimo de 5 vistas incluyendo los menús, diseñado como una single page application, incluyendo presentación, vista de selección, preparación, juego y ganador.
 Posibilidad de elección entre no menos de 4 opciones distintas y dos jugadores a la vez.
 El desarrollo del juego en sí es de diseño libre, pero debe haber al menos una simulación con resultados aleatorios o algún modo de que los resultados vayan variando en función de la interacción con el usuario.
 Objetivos:
