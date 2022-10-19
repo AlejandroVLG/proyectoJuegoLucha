@@ -38,23 +38,6 @@ body{
     align-items: center;
     justify-items: center;
 }
-#resetText{
-    height: 3em;
-    width: 15em;
-    font-family: 'Courier New', Courier, monospace;
-    color: rgba(247, 231, 53, 0.752);
-    text-align: center;
-    border-radius: 2.5em;;
-    background-color: rgba(0, 0, 0, 0.695);
-    box-shadow: -0.1em 0.0em 1em 1em rgba(247, 231, 53, 0.752);
-    margin-top: 4em;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-}
-#resetText:active{
-    transform: scale(0.96);
-}
 #iconoParteInferior{
     margin: 0;
     padding: 0;
