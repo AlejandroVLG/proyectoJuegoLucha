@@ -53,7 +53,12 @@ const cambiarPantalla = (screenDestino) => {
         let destino = document.getElementById(screenDestino);
         destino.style.display = "flex";
 
-        let arrayDestino = ["pantallaPrincipal", "pantallaSeleccionPj", "pantallaLucha", "pantallaVictoria"];
+        let arrayDestino = [
+            "pantallaPrincipal",
+            "pantallaSeleccionPj",
+            "pantallaLucha",
+            "pantallaVictoria"
+        ];
 
         for (let screen of arrayDestino) {
             if (screen != screenDestino) {
@@ -62,11 +67,12 @@ const cambiarPantalla = (screenDestino) => {
                 audio.innerHTML = `<audio src="../audios/musicaMenuPrincipal.mp3" muted></audio>`;
 
             } else if (screen == arrayDestino[0]) {
-                reset()
-            }
+                reset();
+            };
         };
     }, 500);
-}
+};
+
 /* FUNCION PARA SELECCIONAR LUCHADOR */
 
 const seleccionarLuchador = (luchador) => {
@@ -106,7 +112,8 @@ const seleccionarLuchador = (luchador) => {
             }, 500);
         };
     };
-}
+};
+
 /* FUNCIONES PARA GOLPEAR LUCHADOR IZQUIERDA */
 
 const puño1 = () => {
@@ -149,7 +156,7 @@ const puño1 = () => {
 
         }, 7500);
     };
-}
+};
 
 const patada1 = () => {
 
@@ -191,7 +198,8 @@ const patada1 = () => {
 
         }, 7500);
     };
-}
+};
+
 const especial1 = () => {
 
     document.getElementById("versus").style.display = "none";
@@ -232,7 +240,7 @@ const especial1 = () => {
 
         }, 7500);
     };
-}
+};
 
 /* FUNCIONES PARA GOLPEAR LUCHADOR DERECHA */
 
@@ -276,7 +284,8 @@ const puño2 = () => {
 
         }, 7500);
     };
-}
+};
+
 const patada2 = () => {
 
     document.getElementById("versus").style.display = "none";
@@ -317,7 +326,8 @@ const patada2 = () => {
 
         }, 7500);
     };
-}
+};
+
 const especial2 = () => {
 
     document.getElementById("versus").style.display = "none";
@@ -358,7 +368,7 @@ const especial2 = () => {
 
         }, 7500);
     };
-}
+};
 
 /* EVENTO KEYDOWN PARA TODAS LAS ACCIONES */
 
@@ -386,5 +396,5 @@ puño1KeyDownIz.addEventListener("keydown", (event) => {
         case "i":
             especial2();
             break;
-    }
-})
+    };
+});
